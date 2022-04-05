@@ -18,7 +18,7 @@ cenas = {"Piens":1.40,
          "Salvetes": 0.30}
 
 nauda = float(input())
-print("Ar Lambda funkciju")
+print("Ar lambda funkciju")
 cenas_sorted = dict(sorted(cenas.items(), key=lambda s: s[::-1]))
 for i,m in cenas_sorted.items():
     if m <= nauda:
