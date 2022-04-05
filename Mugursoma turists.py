@@ -10,8 +10,8 @@ things = {'зажигалка': 20,
           'салфетки': 40,
           'бутерброды': 820,
           'палатка': 5500,
-          'спальный мешок':
-          2250, 'жвачка': 10}
+          'спальный мешок':2250,
+          'жвачка': 10}
 ves = int(input()) * 1000
 sorted_things = dict(sorted(things.items(), key=lambda x: -x[1]))
 for k, v in sorted_things.items():
