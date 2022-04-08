@@ -27,15 +27,15 @@ def result(human_choice,comp_choice):
     user=choice_to_number(human_choice)
     comp=choice_to_number(comp_choice)
     if(user==comp):
-        res.configure(text = "Tie")
-        #print("Tie")
+        #res.configure(text = "Tie")
+        print("Tie")
     elif((user-comp)%3==1):
-        #print("You win")
-        res.configure(text = "You win")
+        print("You win")
+        #res.configure(text = "You win")
         USER_SCORE+=1
     else:
-        res.configure(text = "Comp wins")
-        #print("Comp wins")
+        #res.configure(text = "Comp wins")
+        print("Comp wins")
 
         COMP_SCORE+=1
     text_area = tk.Text(master=window,height=4,width=30,bg="#FFFF99")

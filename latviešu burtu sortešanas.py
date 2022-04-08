@@ -17,9 +17,9 @@ def lvkey(text):
 
     return key1, key2
 
-#a = ['sākums','Zilonis','sala','sāls','auglis','Sala','sals','ziema']
+a = ['sākums','Zilonis','sala','sāls','auglis','Sala','sals','ziema']
 
-a = input().split()
+#a = input().split()
 
 for i in sorted(a, key=lvkey):
     print(i)

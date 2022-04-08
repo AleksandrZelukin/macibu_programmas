@@ -19,11 +19,12 @@ for k, v in veikals.items():
     	print(k, sep='/n')
     	nauda -= v
 
-'''    	
-sorted_preces = dict(sorted(veikals.items(), key=lambda x: -x[1]))
+nauda = float(input("Cik nauda tev ir? "))
+
+sorted_preces = dict(sorted(veikals.items(), key=lambda x: x[::-1]))
 
 for k, v in sorted_preces.items():
     if v <=  nauda:        
     	print(k, sep='/n')
     	nauda -= v
-'''
+
