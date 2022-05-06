@@ -1,7 +1,5 @@
-file = open("dati.txt", "w")
-
 book=dict()
-print("print 'end' for exit\nprint Enter for continue")
+print("print 'end' for exit\npress Enter for continue")
 
 while True:
     a=(input())
@@ -12,5 +10,9 @@ while True:
     book[a]=b
     
     print(book)
-file.write(str(book))    
+file = open("11b_drabs_ar_failu.txt", "a")
+
+file.write(str(book))
+file.write("\n")
+
 file.close()
