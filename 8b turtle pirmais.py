@@ -1,16 +1,23 @@
 from turtle import *
 
 
-def fig(x,y,a,s,z=4):
-    pensize(z)
-    penup()
-    goto(x,y)
-    pendown()
-    for i in range(s):
-        fd(a)
-        lt(360/s)
-        i += 1
+color("#AA00FF")
+penup()
+goto(-200,-390)
+pendown()
+begin_fill()
+goto(200,-390)
+goto(200,0)
+goto(-200,0)
+goto(-200,-390)
+end_fill()
+penup()
 
-fig(-100,100,5,48,2)
-fig(100,-100,120,5,8)
-
+goto(0,290)
+pendown()
+color("dark sea green")
+begin_fill()
+goto(-250,0)
+goto(250,0)
+goto(0,290)
+end_fill()
