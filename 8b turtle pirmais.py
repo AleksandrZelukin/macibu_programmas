@@ -9,12 +9,22 @@ begin_fill()
 for i in range (12):
     fd(200)
     bk(200)
-    lt(30)
-    i+=1
+    lt(15)
+    fd(180)
+    bk(180)
+    lt(15)
+    i+=2
 
 goto(-350, 150)
 circle(100)
 end_fill()
+up()
+goto(-430, 250)
+color("#AA00FF")
+setheading(-80)
+width(5)
+down()
+circle(80, 160)  # draw smile
 
 color("#AA00FF")
 penup()
@@ -41,3 +51,6 @@ goto(-250,0)
 goto(250,0)
 goto(0,290)
 end_fill()
+
+
+done()
