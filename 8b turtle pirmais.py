@@ -1,5 +1,6 @@
 from turtle import *
-
+setup(1200,800)
+speed(10)
 color('yellow')
 up()
 goto(-350,250)
@@ -10,8 +11,8 @@ for i in range (12):
     fd(200)
     bk(200)
     lt(15)
-    fd(180)
-    bk(180)
+    fd(140)
+    bk(140)
     lt(15)
     i+=2
 
@@ -26,10 +27,20 @@ width(5)
 down()
 circle(80, 160)  # draw smile
 
+up()
+goto(-380,280)
+down()
+circle(10)
+
+up()
+goto(-300,280)
+down()
+circle(10) 
 color("#AA00FF")
 penup()
 goto(-200,-390)
 pendown()
+speed(4)
 begin_fill()
 goto(200,-390)
 print(pos())
