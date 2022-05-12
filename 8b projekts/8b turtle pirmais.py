@@ -1,4 +1,5 @@
 from turtle import *
+bgcolor("lightgray")
 hideturtle()
 setup(1200,800)
 speed(10)
