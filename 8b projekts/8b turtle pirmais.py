@@ -1,3 +1,4 @@
+from cgitb import text
 from turtle import *
 bgcolor("lightgray")
 hideturtle()
@@ -11,9 +12,11 @@ pensize(6)
 begin_fill()
 for i in range (12):
     fd(200)
+    write(pos())
     bk(200)
     lt(15)
     fd(140)
+    write(pos())
     bk(140)
     lt(15)
     i+=2
@@ -30,16 +33,16 @@ down()
 circle(80, 160)  # draw smile
 
 up()
-goto(-380,280)
+goto(-400,280)
 down()
 #circle(10)
-dot()
+dot(20)
 
 up()
 goto(-300,280)
 down()
 #circle(10) 
-dot()
+dot(20)
 
 color("#AA00FF")
 up()
@@ -96,6 +99,7 @@ end_fill()
 color("lightblue")
 up()
 goto(50,-100)
+
 down()
 speed(4)
 begin_fill()
@@ -104,6 +108,5 @@ goto(160,-200)
 goto(160,-100)
 goto(50,-100)
 end_fill()
-
 
 done()
