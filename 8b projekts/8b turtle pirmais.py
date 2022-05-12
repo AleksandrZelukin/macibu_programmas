@@ -32,13 +32,14 @@ circle(80, 160)  # draw smile
 up()
 goto(-380,280)
 down()
-circle(10)
+#circle(10)
+dot()
 
 up()
 goto(-300,280)
 down()
-circle(10) 
-
+#circle(10) 
+dot()
 
 color("#AA00FF")
 up()
