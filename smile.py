@@ -13,12 +13,12 @@ def smile (x,y):
     end_fill()
     
     up()
-    setpos (-70+x,60+y)
+    setpos (-70+x,80+y)
     setheading(-60)
     down()
     color("red")
     pensize(10)
-    circle(80,120) #smile
+    circle(80,120,6) #smile
     
     up()
     setpos(-50+x,120+y)
@@ -26,7 +26,8 @@ def smile (x,y):
     dot(20) #acs
     
     up()
-    setpos(50+x,120+y)
+    #setpos(50+x,120+y)
+    setx(50+x)
     down()
     dot(20)#acs
     up()
