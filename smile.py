@@ -1,9 +1,10 @@
 from turtle import *
-
+speed(10)
 def smile (x,y): 
     pensize(4)
     ht()
-    color("yellow")
+    pencolor("darkred")
+    fillcolor("yellow")
     up()
     setpos(x,y)
     begin_fill()
@@ -28,8 +29,12 @@ def smile (x,y):
     setpos(50+x,120+y)
     down()
     dot(20)#acs
-    setpos(0,0)
+    up()
+    home()
 
 smile(100,200)
-
 smile(100,-200)
+smile(-100,160)
+smile(-180,-20)
+
+exitonclick()
