@@ -1,112 +1,16 @@
-from cgitb import text
+
 from turtle import *
 bgcolor("lightgray")
+from Saule import *
+from maja import *
+
+
 hideturtle()
 setup(1200,800)
 speed(10)
-color('yellow')
-up()
-goto(-350,250)
-down()
-pensize(6)
-begin_fill()
-for i in range (12):
-    fd(200)
-    write(pos())
-    bk(200)
-    lt(15)
-    fd(140)
-    write(pos())
-    bk(140)
-    lt(15)
-    i+=2
-
-goto(-350, 150)
-circle(100)
-end_fill()
-up()
-goto(-430, 250)
-color("#AA00FF")
-setheading(-80)
-width(5)
-down()
-circle(80, 160)  # draw smile
-
-up()
-goto(-400,280)
-down()
-#circle(10)
-dot(20)
-
-up()
-goto(-300,280)
-down()
-#circle(10) 
-dot(20)
-
-color("#AA00FF")
-up()
-goto(-200,-390)
-down()
-speed(4)
-begin_fill()
-goto(200,-390)
-print(pos())
-goto(200,0)
-print(pos())
-goto(-200,0)
-print(pos())
-goto(-200,-390)
-print(pos())
-end_fill()
-
-color("brown")
-up()
-goto(100,350)
-down()
-speed(4)
-begin_fill()
-goto(100,100)
-goto(60,100)
-goto(60,350)
-goto(100,350)
-end_fill()
-
-penup()
-goto(0,290)
-pendown()
-color("dark sea green")
-begin_fill()
-goto(-250,0)
-goto(250,0)
-goto(0,290)
-end_fill()
 
 
-color("brown")
-up()
-goto(-50,-100)
-down()
-speed(4)
-begin_fill()
-goto(-50,-400)
-goto(-160,-400)
-goto(-160,-100)
-goto(-50,-100)
-end_fill()
 
 
-color("lightblue")
-up()
-goto(50,-100)
-
-down()
-speed(4)
-begin_fill()
-goto(50,-200)
-goto(160,-200)
-goto(160,-100)
-goto(50,-100)
-end_fill()
 
 done()
