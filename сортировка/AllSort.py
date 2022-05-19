@@ -1,6 +1,6 @@
 #https://pythonist.ru/algoritmy-sortirovki-s-python/
 class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def sortArray(self, nums: list[int]) -> list[int]:
         # Сортировка пузырьком
         def bubbleSort(array):
             swapped = False
