@@ -35,4 +35,21 @@ class D:
         self.name = name
 q = D('Anna')
 print(q.name)
+
+
+class Skol:
+    def __init__(self, age=0, vards=None):
+        self.age=age
+        self.vards=vards
+    def drukat(self):
+        print(self.vards,self.age)
+        
+       
+a1 = Skol(16, "Anna") #Comment 
+a2 = Skol(17, "Algimantas")
+b1 = Skol()
+
+a1.drukat()
+a2.drukat()
+b1.drukat()
     
