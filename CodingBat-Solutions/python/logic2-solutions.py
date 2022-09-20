@@ -140,7 +140,6 @@ make_chocolate(4, 1, 10) → -1
 make_chocolate(4, 1, 7) → 2
 """
 def make_chocolate(small, big, goal):
-def make_chocolate(small, big, goal):
 
     total = small + (5*big) 
 
