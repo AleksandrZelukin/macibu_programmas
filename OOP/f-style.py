@@ -15,4 +15,8 @@ def template_style(name, age):
 
 
 def f_style(name, age):
-    return "Привет, меня зовут {name}. Мне {age} лет."
+    return f"Привет, меня зовут {name}. Мне {age} лет."
+    return "Привет, меня зовут", name, "Мне", age, "лет."
+
+a=f_style("Anna", 18)
+print(a)
