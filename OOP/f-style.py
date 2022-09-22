@@ -19,4 +19,6 @@ def f_style(name, age):
     return "Привет, меня зовут", name, "Мне", age, "лет."
 
 a=f_style("Anna", 18)
+a=f_style("Anna", 18)
+a=f_style("Anna", 18)
 print(a)
