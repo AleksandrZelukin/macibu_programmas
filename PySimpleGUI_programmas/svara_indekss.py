@@ -15,13 +15,13 @@ def calc_bmi(h,w):
             standard = "trekns"
     except (ValueError, ZeroDivisionError):
         return None
-    else:
-        return (f'BMI: {bmi}, {standard}')
+    #else:
+    return (f'BMI: {bmi}, {standard}')
 
 layot = [[sg.Text("Augums"), sg.InputText (size=(25,1))],
         [sg.Text("Svars"), sg.InputText(size=(25,1))],
         [sg.Button("aprēķināt BMI", key='submit')],
-        [sg.Text('', key='bmi', size=(20,2))],
+        [sg.Text( key='bmi', size=(20,2))],
         [sg.Button("Beigt", key='q')]]
 
 window = sg.Window ("Calculator BMI", layot)
