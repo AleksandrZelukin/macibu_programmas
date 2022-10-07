@@ -1,5 +1,5 @@
 from cgitb import text
-from curses import window
+#from curses import window
 import PySimpleGUI as sg
 def calc_bmi(h,w):
     try:
