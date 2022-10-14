@@ -1,0 +1,46 @@
+2_uzdevums
+
+Aizpildi tukšās vietas!
+
+ 
+#Izveidot klasi "Rinkis"
+
+ __________ Rinkis:
+
+#konstruktors ar parametru radiuss
+
+   def_________self, radiuss):
+
+#konstruktorā inicializēt parametru sākumvērtību.
+
+      self._________ = radiuss
+
+   def_________(_______, radiuss):
+
+#ja rādiuss ir nulle vai negatīvs
+
+       if (radiuss < 0 or radiuss =________ ):
+
+#tad uzstāda noklusējuma rādiusu 1
+
+       _________.radiuss = 1
+
+# citādi rādiuss ir metodē dotais rādiuss
+
+else:
+
+   self.radiuss = _____________
+
+ 
+
+#izvada rādiusu
+
+ _____________ izvadit_radiusu(self):  
+
+   print(_____________)
+
+#aprēķina diametru
+
+def___________(self):
+
+   print(2 * radiuss)
