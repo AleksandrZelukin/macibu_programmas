@@ -1,4 +1,4 @@
-''''
+
 summa = float(input("Cik tev ir? "))
 #summa2 = float(input("Cik tu grībi? "))
 procent = float(input("Gadā Procentu likme: "))
@@ -10,7 +10,7 @@ while summa < summa2:
     count += 1 
     print(count," gads",round(summa,2))
     
-'''
+
 
 summa = float(input("Cik tev ir? "))
 procent = float(input("Gadā Procentu likme: "))
