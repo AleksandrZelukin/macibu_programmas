@@ -8,3 +8,40 @@ h1 {
 p {
   color: red;
 }
+
+table {
+  table-layout: fixed; /* Фиксированная ширина ячеек */
+  width: 50%; /* Ширина таблицы */
+ }
+ .col1 {
+   width: 160px;
+   }
+ .coln {
+   width: 60px; 
+  }
+  .block1 { 
+    width: 200px; 
+    background: #ccc;
+    padding: 2%;
+    padding-right: 120px; 
+    border: solid 1px black; 
+    float: ;
+    left: -100%;
+   }
+   .block2 { 
+    width: 200px; 
+    background: rgb(151, 132, 195); 
+    padding: 12%; 
+    border: solid 2px black; 
+    padding-left: 50%
+    position: fixed; 
+    top: 20px;; 
+    left:; 
+   }
+   .block3 { 
+    width: 200px; 
+    background: rgb(205, 42, 69); 
+    padding: 12%; 
+    border: solid 2px black; 
+  
+   }
