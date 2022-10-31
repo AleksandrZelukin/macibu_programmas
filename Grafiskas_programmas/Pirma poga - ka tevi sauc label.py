@@ -5,10 +5,10 @@ a=Tk()
 a.title("Skolotāja poga")
 a.geometry("800x800")
 
-#text = Text(width=25, height=5, bg="lightblue")
-#text.pack(ipadx=100, ipady=5)
+text = Text(width=25, height=5, bg="lightblue")
+text.pack(ipadx=100, ipady=5)
 
-text = Entry(width=25, bg="lightblue")
+text = Entry(width=20, bg="lightblue")
 text.pack(ipadx=100, ipady=5)
 
 #frame = Frame()
@@ -41,7 +41,7 @@ def quit():
 
     
     
-#b=a.Entry(master)   
+b=a.Entry(master)   
 
 btn1 = Button(text="Poga 1",bg="red",fg="blue",padx="20",pady="1",font="16", command=A)
 
