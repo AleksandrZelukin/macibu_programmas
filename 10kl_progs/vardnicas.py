@@ -19,4 +19,5 @@ while True:
     print(d)
     if a =="stop":
         del d["stop"]
+        print(d)
         break
