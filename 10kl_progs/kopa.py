@@ -7,3 +7,7 @@ b = {"Valmiera", "Rezekne", "Daugavpils", "Ludza"}
 c= a.union(b) #divu kopu apvienošana ar metodi union
 print(a)
 print(c)
+
+b.remove("Valmiera")
+b.add("Ogre")
+print(b)
