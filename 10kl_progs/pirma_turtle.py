@@ -20,5 +20,6 @@ a.begin_fill()
 for i in range(3):
     a.forward(100)
     a.left(120)
-a.end_fill()  
+a.end_fill() 
+
 a.screen.mainloop()
