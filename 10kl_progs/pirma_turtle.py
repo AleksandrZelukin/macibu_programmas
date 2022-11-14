@@ -1,12 +1,6 @@
 from turtle import *
 a = Turtle()
-'''
-a.goto(100,0)
-a.goto(100,-100)
-a.goto(0,-100)
-a.goto(0,0)
 
-'''
 a.shape("square")
 a.pencolor("red")
 a.fillcolor("yellow")
@@ -21,7 +15,10 @@ a.end_fill()
 a.up()
 a.goto(-200,100)
 a.down()
+a.fillcolor("blue")
+a.begin_fill()
 for i in range(3):
     a.forward(100)
     a.left(120)
-    
+a.end_fill()  
+a.screen.mainloop()
