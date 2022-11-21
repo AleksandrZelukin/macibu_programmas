@@ -12,25 +12,36 @@ print("Cenas")
 l = float(input("Lamināts(par paku),euro: "))
 t = float(input("Tapetes(par rulli),euro: "))
 k = float(input("Krāsa(par 1.litru),euro: "))
+nauda = []
+nauda.append(l)
+nauda.append(t)
+nauda.append(k)
+
+#print(nauda)
 
 def remonts(garums, augstums, platums):
     return math.ceil(garums*platums/2.131), math.ceil((garums+platums)*augstums/10), math.ceil((garums*platums)*0.4)
 
-x = int(input("garums: "))
+x = float(input("garums: "))
 y = float(input("augstums: "))
-z = int(input("platums:"))
+z = float(input("platums:"))
+
+tame = list(remonts(x,y,z))
+
+laminats = (t[0])*l
+tapetes = (t[1])*t
+krasa = (t[2])*k
+
+m=len(nauda)
+i=0
+kopa=[]
+while i<m:
+    kopa.append(nauda[i]*tame[i])
+    i+=1
+#print(kopa)
 
 
-print(remonts(x,y,z))
-t = remonts(x,y,z)
-
-laminats = t[0]*l
-tapetes = t[1]*t
-krasa = t[2]*k
-
-kopa = laminats+tapetes+krasa
-
-print("Kopā jamāksā: ", round(kopa,2),"Euro")
+print("Kopā jamāksā: ", round(sum(kopa),2),"Euro")
 
 '''
 2.	Pie jums ir vērsies uzņēmums SIA Stabili podesti, ar vēlmi atvieglot materiālu sagatavošanu finiera podestu ražošanai. Podestus ražo gan standarta izmēros, gan pēc pasūtītāja izmēriem.
