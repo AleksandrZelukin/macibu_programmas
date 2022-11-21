@@ -1,4 +1,5 @@
 '''
+https://siic-lv.github.io/programmesana/vidusskola/p1/specifikacija/#gridas-mainas-izmaksu-aprekinu-programma
 Pasūtītājs Andris Ziediņš, remontē dzīvokļus un sagatavo tāmes. 
 Andra draugs, kas ir programmētājs, 
 izveidoja specifikāciju pēc Andra prasībām. 
