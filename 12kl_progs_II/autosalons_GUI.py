@@ -10,7 +10,7 @@ sg.theme('DarkBlue')
 #print(theme_name_list)
  
 class Produkts:
-    Prod_kategorija = "" #1- remints 2 - ķim'.tir.
+    Prod_kategorija = "" #1- remonts 2 - ķim'.tir.
     Prod_nosaukums = "" # riepu balansešana, eļlas maiņa, salona kopšana, virsbuves mazgašanas
     Prod_cena = "" # 12 - 555
 
@@ -29,9 +29,9 @@ class Produkts:
 #        self.Prod_pieejams = True
         
     def __repr__(self):
-        if self.Prod_kategorija: return self.prod_categorija
-        elif self.Prod_nosaukums: return self.prod_nosaukums
-        elif self.Prod_cena: return self.prod_cena
+        if self.Prod_kategorija: return self.Prod_kategorija
+        elif self.Prod_nosaukums: return self.Prod_nosaukums
+        elif self.Prod_cena: return self.Prod_cena
         return ''
     
     def Produkts_info(self):
@@ -87,7 +87,7 @@ class Pakalpojums:
 
 
 sadala1 = [[sg.Text('Bremžu pārbaude, eļļas un filtru maiņa,'"\n"'Riteņu konverģences un slīpuma regulēšana un tml.',font='Helvetica 14')],
-           [sg.Text('Procedūras kategorija',size=(24,1)),sg.Input('',key='_pakalpojums')],
+           [sg.Text('Pakalpojuma kategorija',size=(24,1)), sg.InputCombo(('Automšinu remonts', 'ķīmiska tiritāva'),key='_pakalpojums', size=(26, 1))],
            [sg.Text('Remonts pēc avārijas, Pīlings, Pārbaude un tml.',font='Helvetica 16')],
            [sg.Text('Pakalpojuma nosaukums',size=(24,1)),sg.Input('',key='_produkts')],
            [sg.Text('Pakalpojuma cena',size=(24,1)),sg.Input('',key='_cena')],
@@ -103,13 +103,12 @@ sadala1 = [[sg.Text('Bremžu pārbaude, eļļas un filtru maiņa,'"\n"'Riteņu k
            #def __init__(self, sakDat, beigDat, idProdukts, idNomnieks, daudzums, cenaDiena, sodienasDat):
            [sg.Text('Sakuma datums', size=(22,1)),sg.Input('',key='sakDat')],
            [sg.Text('Produkta id', size=(22,1)),sg.Input('',key='idProdukts')],
-           [sg.Text('Klienta id', size=(22,1)),sg.Input('',key='idKlients')],
-           [sg.Text('Sodienas datums', size=(22,1)),sg.Input('',key='sodienasDat')],
+           #[sg.Text('Klienta id', size=(22,1)),sg.Input('',key='idKlients')],
+           #[sg.Text('Sodienas datums', size=(22,1)),sg.Input('',key='sodienasDat')],
            [sg.Button('Saglabat Auto salona pakalpojuma datus')]]
 
 sadala2 = [[sg.Button('Pakalpojuma info, izvada uz ekrana')],
           [sg.Button('Klienta info, izvada uz ekrana')],
-          
           [sg.Button('Cena par pakalpujumu, izvada uz ekrana')]]
 
 sadala3 = [[sg.Button('Pakalpojums: veidot atskaiti teksta faila formata')],
@@ -141,7 +140,7 @@ while True:
     klients = Klients(values['_vards'], values['_uzvards'], values['_pk'], values['_tel_numurs'])      
   elif event == 'Saglabat Auto salona pakalpojuma datus':
           
-    prod = Pakalpojums(values['sakDat'],values['idProdukts'],values['idKlients'],values['sodienasDat'],values['_cena'])
+    kopa = [prod, klients]
 
  
 #======================================= 2 sadala ===============
@@ -149,7 +148,8 @@ while True:
     prod.Produkts_info_print()
   elif event == 'Klienta info, izvada uz ekrana':
     klients.Klients_info_print()
-  
+  elif event == 'Cena par pakalpujumu, izvada uz ekrana':
+    print(kopa)
     
 
 
