@@ -28,9 +28,9 @@ z = float(input("platums:"))
 
 tame = list(remonts(x,y,z))
 
-laminats = (t[0])*l
-tapetes = (t[1])*t
-krasa = (t[2])*k
+laminats = (tame[0])
+tapetes = (tame[1])
+krasa = (tame[2])
 
 m=len(nauda)
 i=0
@@ -39,8 +39,9 @@ while i<m:
     kopa.append(nauda[i]*tame[i])
     i+=1
 #print(kopa)
-
-
+print("Laminata pirtkt: ", tame[0], "pakas")
+print("Tapetes  pirtkt: ", tame[1], "rullus")
+print("Krāsas pirtkt: ", tame[2], "litru")
 print("Kopā jamāksā: ", round(sum(kopa),2),"Euro")
 
 '''
