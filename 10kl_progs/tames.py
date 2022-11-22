@@ -8,7 +8,7 @@ kas no dotiem argumentiem aprēķina un atgriež Andrim derīgu rezultātu.
 '''
 
 import math
-'''
+
 print("Cenas")
 l = float(input("Lamināts(par paku),euro: "))
 t = float(input("Tapetes(par rulli),euro: "))
@@ -45,7 +45,7 @@ print("Tapetes  pirtkt: ", tame[1], "rullus")
 print("Krāsas pirtkt: ", tame[2], "litru")
 print("Kopā jamāksā: ", round(sum(kopa),2),"Euro")
 
-
+'''
 2.	Pie jums ir vērsies uzņēmums SIA Stabili podesti, 
 ar vēlmi atvieglot materiālu sagatavošanu finiera podestu ražošanai. 
 Podestus ražo gan standarta izmēros, gan pēc pasūtītāja izmēriem.
@@ -92,7 +92,7 @@ r=int(input("skaits: "))
 print(materialuAprekins(x,y,z,r))
 
 liste = x
-print("Liste daudzums:", x*12*r)
+print("Liste daudzums:", 12*r)
 sture = r*8
 print("stures daudzums: ", sture)
 finieris = r*x*y
