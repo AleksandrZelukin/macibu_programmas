@@ -89,6 +89,7 @@ class Pakalpojums:
 sadala1 = [[sg.Text('Bremžu pārbaude, eļļas un filtru maiņa,'"\n"'Riteņu konverģences un slīpuma regulēšana un tml.',font='Helvetica 14')],
            [sg.Text('Pakalpojuma kategorija',size=(24,1)), sg.InputCombo(('Automšinu remonts', 'ķīmiska tiritāva'),key='_pakalpojums', size=(26, 1))],
            [sg.Text('Remonts pēc avārijas, Pīlings, Pārbaude un tml.',font='Helvetica 16')],
+           
            [sg.Text('Pakalpojuma nosaukums',size=(24,1)),sg.Input('',key='_produkts')],
            [sg.Text('Pakalpojuma cena',size=(24,1)),sg.Input('',key='_cena')],
            [sg.Button('Saglabat pakalpojuma datus')], 
