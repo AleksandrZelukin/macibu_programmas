@@ -10,9 +10,9 @@ sg.theme('DarkBlue')
 #print(theme_name_list)
  
 class Produkts:
-    Prod_kategorija = ""
-    Prod_nosaukums = ""
-    Prod_cena = ""
+    Prod_kategorija = "" #1- remints 2 - ķim'.tir.
+    Prod_nosaukums = "" # riepu balansešana, eļlas maiņa, salona kopšana, virsbuves mazgašanas
+    Prod_cena = "" # 12 - 555
 
     
     id_iter = itertools.count()
@@ -21,9 +21,9 @@ class Produkts:
         self.Prod_pieejams = True
         
 
-    def __init__(self, _pakalpojums, _produkts, _cena):
+    def __init__(self, _kategorija, _produkts, _cena):
         self.Prod_id = next(self.id_iter)+1
-        self.Prod_kategorija = _pakalpojums
+        self.Prod_kategorija = _kategorija
         self.Prod_nosaukums = _produkts
         self.Prod_cena = _cena
 #        self.Prod_pieejams = True
@@ -67,7 +67,24 @@ class Klients:
         print("Klienta personas kods: " + self.Klienta_PK)
         print("Klienta telefona numurs: " + str(self.Klienta_tel_numurs) + "\n")
         
-        
+class Pakalpojums:
+        Pakalpojuma_sakuma_datums = 0
+        Pakalpojuma_beigu_datums = 0
+        Pakalpojuma_cena = 0
+        id_Produkts = 0
+        id_Klients = 0
+        id_Pakalpojums = 0
+
+        id_iter_pakalpojums = itertools.count()
+
+        def __init__(self, sakDat, beigDat, idProdukts, idKlients, cenaPakalpojuma):
+          self.id_Klients = next(self.id_iter_pakalpojums)+1
+          self.Pakalpojuma_sakuma_datums = datetime.datetime.strptime(sakDat,"%d.%m.%Y.").date() 
+          self.Pakalpojuma_beigu_datums = datetime.datetime.strptime(beigDat,"%d.%m.%Y.").date() 
+          self.id_Produkts = idProdukts
+          self.id_Klients = idKlients
+          self.cenaPakalpojuma = cenaPakalpojuma
+
 
 sadala1 = [[sg.Text('Bremžu pārbaude, eļļas un filtru maiņa,'"\n"'Riteņu konverģences un slīpuma regulēšana un tml.',font='Helvetica 14')],
            [sg.Text('Procedūras kategorija',size=(24,1)),sg.Input('',key='_pakalpojums')],
@@ -85,11 +102,8 @@ sadala1 = [[sg.Text('Bremžu pārbaude, eļļas un filtru maiņa,'"\n"'Riteņu k
 
            #def __init__(self, sakDat, beigDat, idProdukts, idNomnieks, daudzums, cenaDiena, sodienasDat):
            [sg.Text('Sakuma datums', size=(22,1)),sg.Input('',key='sakDat')],
-           [sg.Text('Sakuma laiks', size=(22,1)),sg.Input('',key='sakTime')],
            [sg.Text('Produkta id', size=(22,1)),sg.Input('',key='idProdukts')],
            [sg.Text('Klienta id', size=(22,1)),sg.Input('',key='idKlients')],
-           [sg.Text('Pakalpijuma daudzums', size=(22,1)),sg.Input('',key='daudzums')],
-           
            [sg.Text('Sodienas datums', size=(22,1)),sg.Input('',key='sodienasDat')],
            [sg.Button('Saglabat Auto salona pakalpojuma datus')]]
 
@@ -126,7 +140,8 @@ while True:
   elif event == 'Saglabat klienta datus':
     klients = Klients(values['_vards'], values['_uzvards'], values['_pk'], values['_tel_numurs'])      
   elif event == 'Saglabat Auto salona pakalpojuma datus':
-    prod = Pakalpojums(values['sakDat'],values['sakTime'],values['idProdukts'],values['idKlients'],values['daudzums'],values['sodienasDat'])
+          
+    prod = Pakalpojums(values['sakDat'],values['idProdukts'],values['idKlients'],values['sodienasDat'],values['_cena'])
 
  
 #======================================= 2 sadala ===============
