@@ -10,9 +10,9 @@ sg.theme('DarkBlue')
 #print(theme_name_list)
  
 class Produkts:
-    Prod_kategorija = "" #1- remonts 2 - ķim'.tir.
-    Prod_nosaukums = "" # riepu balansešana, eļlas maiņa, salona kopšana, virsbuves mazgašanas
-    Prod_cena = "" # 12 - 555
+    Prod_kategorija = "" #0- remonts 1 - ķim'.tir.
+    Prod_nosaukums = "" # riepu balansešana, eļlas maiņa, salona kopšana, virsbuves mazgašanas un tml.
+    Prod_cena = "" # 12 ~ 555
 
     
     id_iter = itertools.count()
@@ -85,27 +85,25 @@ class Pakalpojums:
           self.id_Klients = idKlients
           self.cenaPakalpojuma = cenaPakalpojuma
 
+data1 = ['Automšinu remonts', 'ķīmiska tiritāva']
+data2 = ['Virsbuve mazgašana', 'ķīmiska tiritāva', 'salona putekļu sūkšana', 'riepu maiņa','eļļas maiņa']
 
 sadala1 = [[sg.Text('Bremžu pārbaude, eļļas un filtru maiņa,'"\n"'Riteņu konverģences un slīpuma regulēšana un tml.',font='Helvetica 14')],
-           [sg.Text('Pakalpojuma kategorija',size=(24,1)), sg.InputCombo(('Automšinu remonts', 'ķīmiska tiritāva'),key='_pakalpojums', size=(26, 1))],
+           [sg.Text('Pakalpojuma kategorija',size=(24,1)), sg.Combo(data1, size=24, enable_events=True, key='_pakalpojums')],
            [sg.Text('Remonts pēc avārijas, Pīlings, Pārbaude un tml.',font='Helvetica 16')],
-           
-           [sg.Text('Pakalpojuma nosaukums',size=(24,1)),sg.Input('',key='_produkts')],
-           [sg.Text('Pakalpojuma cena',size=(24,1)),sg.Input('',key='_cena')],
+           [sg.Text('Pakalpojuma nosaukums',size=(24,1)),sg.Combo(data2, size=24, enable_events=True, key='_pakalpojums')],
+           [sg.Text('Pakalpojuma cena',size=(24,1)),sg.Input('',size=10,key='_cena')],
+           [sg.CalendarButton('Kalendars', title='Pick a date any date', no_titlebar=True, close_when_date_chosen=False,  
+           target='-CAL-',format='%m.%d.%Y.',size=23),sg.Input(key='-CAL-', size=(20,1))],
            [sg.Button('Saglabat pakalpojuma datus')], 
            
-           #def __init__(self, _vards, _uzvards, _pk, _tel_numurs):
+           
            [sg.Text('Klienta vards', size=(22,1)),sg.Input('',key='_vards')],
            [sg.Text('Klienta uzvards', size=(22,1)),sg.Input('',key='_uzvards')],
            [sg.Text('Personas kods', size=(22,1)),sg.Input('',key='_pk')],
            [sg.Text('Telefons', size=(22,1)),sg.Input('(+371)  ',key='_tel_numurs')],
            [sg.Button('Saglabat klienta datus')], 
 
-           #def __init__(self, sakDat, beigDat, idProdukts, idNomnieks, daudzums, cenaDiena, sodienasDat):
-           [sg.Text('Sakuma datums', size=(22,1)),sg.Input('',key='sakDat')],
-           [sg.Text('Produkta id', size=(22,1)),sg.Input('',key='idProdukts')],
-           #[sg.Text('Klienta id', size=(22,1)),sg.Input('',key='idKlients')],
-           #[sg.Text('Sodienas datums', size=(22,1)),sg.Input('',key='sodienasDat')],
            [sg.Button('Saglabat Auto salona pakalpojuma datus')]]
 
 sadala2 = [[sg.Button('Pakalpojuma info, izvada uz ekrana')],
