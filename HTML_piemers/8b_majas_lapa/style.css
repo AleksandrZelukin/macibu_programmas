@@ -13,8 +13,10 @@ p {
 }
 
 table {
-  table-layout: fixed; 
-  width: 50%; 
+  table-layout: fixed;
+  background-color: bisque; 
+  width: 100%;
+  height: 350%; 
   border: double 4px hwb(0 16% 23%); 
  }
 
