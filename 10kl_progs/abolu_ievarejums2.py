@@ -4,8 +4,8 @@ Specifikacija:
 Nepieciešama iespēja definēt recepti un tās sastāvdaļas
 Nepieciešama iespēja definēt, cik maksā katra sastāvdaļa
 Sistēmai jāaprēķina kopējās ievārījuma izmaksas, balstoties uz ievadīto ābolu apjomu
-'''
 
+'''
 def izmaksas_receptei(recepte, cena):
     summa = 0
     for sastavdala, daudzums in recepte:
@@ -18,8 +18,8 @@ def izmaksas_kopa(abolu_svars):
     izmaksas_kg = izmaksas_receptei(recepte, cenas) / recepte["aboli"]
     return abolu_svars * izmaksas_kg
 
-aboli = 1.5
-print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, izmaksas_kopa(aboli)))
+abolu_svars = 1.5
+print("Uz {} kg ābolu izmaksas būs {} EUR".format(abolu_svars, izmaksas_kopa(abolu_svars)))
 
 aboli = 5
 print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, izmaksas_kopa(aboli)))
