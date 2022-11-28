@@ -1,4 +1,6 @@
-'''Specifikacija:
+'''
+https://siic-lv.github.io/programmesana/vidusskola/p1/specifikacija/
+Specifikacija:
 Nepieciešama iespēja definēt recepti un tās sastāvdaļas
 Nepieciešama iespēja definēt, cik maksā katra sastāvdaļa
 Sistēmai jāaprēķina kopējās ievārījuma izmaksas, balstoties uz ievadīto ābolu apjomu
@@ -11,4 +13,5 @@ def ievarijums(aboli_svars, cukurs_uz_kg):
 
 aboli = 1.5
 cukurs = 0.7
-print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, ievarijums(aboli, cukurs)))
+#print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, ievarijums(aboli, cukurs)))
+print("Uz",aboli,"kg ābolu izmaksas būs ",ievarijums(aboli, cukurs))
