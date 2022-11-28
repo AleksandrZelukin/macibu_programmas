@@ -1,14 +1,14 @@
 body {
     padding: 5%;
   
-    background-color: powderblue;
+    background-color: tomato;
     border: double 6px hwb(0 41% 24%); 
   }
   h1 {
     color: blue;
   }
   p {
-    color: red;
+    color: rgb(14, 204, 241);
   }
   div{
     size: 100%;

@@ -2,7 +2,7 @@
 body {
   padding: 5%;
 
-  background-color: powderblue;
+  background-color: rgb(106, 228, 127);
   border: double 6px hwb(0 41% 24%); 
 }
 h1 {
