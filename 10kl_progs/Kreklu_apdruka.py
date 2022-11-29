@@ -38,5 +38,14 @@ if a == 'zime':
 if a == 'foto':
     apdruka = s*20
 
-print(apdruka)
-
+piegade = input("Piegadāt pasūtījumu? y/n\n")
+if piegade == 'y' and apdruka <50:
+    apdruka +=15
+    print("Jūsu pasūtijums māksā {} EUR".format(apdruka))
+elif piegade == 'y' and apdruka <100:
+    print("Jūsu pasūtijums māksā {} EUR".format(apdruka))
+elif piegade == 'y' and apdruka >100:
+    apdruka -=apdruka*0.05
+    print("Jūsu pasūtijums māksā {} EUR".format(apdruka))
+else: print("Jūsu pasūtijums māksā {} EUR".format(apdruka))
+print("Paldies, ka izmantojiet musu pakalpojumu!")
