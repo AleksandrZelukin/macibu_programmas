@@ -28,6 +28,9 @@ table {
   height: 350%; 
   border: 4px hwb(0 16% 23%); 
  }
+ td {
+  text-align: center;
+}
 
   .block1 { 
     width: 100%; 
@@ -86,4 +89,7 @@ table {
       width: 50%;
       border: 3px solid green;
       padding: 10px;
+    }
+    .center2 {
+      text-align: center;
     }
