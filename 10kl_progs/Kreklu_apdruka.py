@@ -48,4 +48,6 @@ elif piegade == 'y' and apdruka >100:
     apdruka -=apdruka*0.05
     print("Jūsu pasūtijums māksā {} EUR".format(apdruka))
 else: print("Jūsu pasūtijums māksā {} EUR".format(apdruka))
+
+print("Jūsu pasutijums satav no {} kreklus ar apdruku ar {} formātu".format(s,a))
 print("Paldies, ka izmantojiet musu pakalpojumu!")
