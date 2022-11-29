@@ -8,9 +8,10 @@ Sistēmai jāaprēķina kopējās ievārījuma izmaksas, balstoties uz ievadīto
 '''
 def izmaksas_receptei(recepte, cena):
     summa = 0
-    for sastavdala, daudzums in recepte:
-        summa += daudzums * cena[sastavdala]
+    for sastavdala  in recepte:
+        summa += sastavdala * cena[sastavdala]
     return summa
+
 
 def izmaksas_kopa(abolu_svars):
     recepte = {"cukurs": 0.6, "kanelis": 0.08, "aboli": 2.0, "udens": 0.2}
@@ -23,3 +24,4 @@ print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, izmaksas_kopa(aboli))
 
 aboli = 5
 print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, izmaksas_kopa(aboli)))
+
