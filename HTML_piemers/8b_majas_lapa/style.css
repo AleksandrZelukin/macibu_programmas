@@ -5,7 +5,16 @@ body {
   background-color: #f1ebf5;
   border: double 6px hwb(0 41% 24%); 
 }
+div {
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
 h1 {
+  text-align: center;
   color: rgb(160, 129, 42);
 }
 p {
@@ -17,7 +26,7 @@ table {
   background-color: bisque; 
   width: 100%;
   height: 350%; 
-  border: double 4px hwb(0 16% 23%); 
+  border: 4px hwb(0 16% 23%); 
  }
 
   .block1 { 
@@ -65,4 +74,16 @@ table {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
+    .center {
+      margin: auto;
+      width: 50%;
+      border: 3px solid green;
+      padding: 10px;
     }
