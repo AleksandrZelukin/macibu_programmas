@@ -1,16 +1,50 @@
 
 body {
   padding: 5%;
-
   background-color: powderblue;
   border: double 6px hwb(0 41% 24%); 
+  background-color: powderblue;
+	padding-top: 2%;
+	padding-left: 10%;
+	padding-right: 20%;
+	padding-bottom: 20%;
+	border: double 6px hwb(0 41% 24%);
 }
+
 h1 {
-  color: blue;
+  text-align: center;
+	color: yellow;
 }
+
+h2 {
+	text-align: center;
+	color: blue;
+	}
+
 p {
   color: red;
 }
+
+ul{
+	padding-left: 40%;
+	color: blue; 
+	font-size: 120%;}
+
+  ol{
+	color: red;
+	font-size: 200%;
+		}
+
+div {
+	background-color: #bb12ee;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+		}	
 
 table {
   table-layout: fixed; 
@@ -64,3 +98,6 @@ table {
     display: inline-block;
     font-size: 16px;
     }
+
+
+
