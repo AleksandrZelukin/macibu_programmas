@@ -1,5 +1,15 @@
-a = float(input())
-b = int(input())
+a = float(input("Pirmais skaitlis: "))
+b = float(input("Otrais skaitlis: "))
 
-c = a + b
-print(c)
+print("Ko darisim? * / + -")
+c = input()
+print("Rezultāts")
+if c == "*":
+    print(a*b)
+if c == "/":
+    print(a/b)
+if c == "+":
+    print(a+b)
+if c == "-":
+    print(a-b)
+
