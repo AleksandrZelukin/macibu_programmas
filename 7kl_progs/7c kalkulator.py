@@ -1,9 +1,7 @@
-a , b= float(input("Pirmais skaitlis: ")), float(input("Otrais skaitlis: "))
-#b = float(input("Otrais skaitlis: "))
+a = float(input("Pirmais skaitlis: "))
+b = float(input("Otrais skaitlis: "))
 
 print("Ko darīsim? * / - +")
-
-
 
 s = input()
 
