@@ -10,7 +10,7 @@ a = [12, "ASSA", 45.6, 23, "12"]
 
 print(a[0]+a[2])
 
-'''
+
 
 pamatne = int(input("Taisnstura pamatne: "))
 augums = int(input("Taisnstura augums: "))
@@ -18,3 +18,4 @@ augums = int(input("Taisnstura augums: "))
 laukums = pamatne*augums
 
 print("taisnstura laukums: ",laukums,"mm")
+'''
