@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Skaitītājs!</title>
+</head>
+<style>
+    body {
+  padding: auto;
+  background-color: powderblue;
+  border: double 6px hwb(0 41% 24%); 
+  background-color: powderblue;
+  border: double 6px hwb(0 41% 24%);
+}
+</style>
+<html>
+<body>
+<a onmouseover=skaitit(1) onmouseout=neskaitit(0) 
+    href="javascript:self.close()">
+    <img src="eka.png" alt="Ēka" width="170" height="156">
+</a>
+<p>Skaita laiku, ko peles rādītājs pavada uz ēkas attēla.</p>
+<form>
+    <input readOnly name=skaita size="20">
+</form>
+<p>Aizver lappusi.</p>
+<SCRIPT>
+var pauze = 0;
+function skaitit() {
+    document.forms[0].skaita.value++;
+    if(document.forms[0].skaita.value > 1000) {
+        document.forms[0].skaita.value = 0;
+    }
+    pauze = setTimeout("skaitit()", 10);
+}
+function neskaitit() {
+    clearTimeout(pauze);
+}
+</SCRIPT>
+
+</body>
+</html>
