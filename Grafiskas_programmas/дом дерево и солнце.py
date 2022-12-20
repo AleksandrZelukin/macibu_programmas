@@ -177,3 +177,5 @@ george.write("Saule",  font=style)
 george.penup()
 george.goto(-100, -150)
 george.left(90)
+
+turtle.mainloop()

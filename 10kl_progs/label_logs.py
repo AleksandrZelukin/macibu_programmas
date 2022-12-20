@@ -2,27 +2,30 @@ from tkinter import *
 from tkinter import messagebox
 
 root = Tk()
-root.geometry('400x400+800+300')
+root.geometry('400x200+800+300')
 root.title('Mans pirmais logs')
 
-def start():
-    name = atbilde.get()
-    #messagebox.showinfo('Sveiki!', '{name}'.format(name=name))
-    messagebox.showinfo('Sveiki',name)
 
-info = Label(root,text="Sveiki, draugs!")
+def atb():
+	#atbilde2["text"] = atbilde.get()
+	atbilde2.config(text=atbilde.get())
+    
+info = Label(root,text="Sveiki, draugs! Ka tevi saus?",font='32')
 info.pack()
 
-jautajums = Label(root, text="Ka tevi sauc?")
-jautajums.pack(padx=10, pady=10)
-
 atbilde = Entry(root)
-atbilde.pack()
+atbilde.pack(pady=20)
 
-btn = Button(root, text='nospiež mani', command=start)
-btn.pack(padx=10, pady=10)
-btn2 = Button(root, text='Iziet no progrāmmas', command=root.destroy )
-btn2.pack()
+
+btn = Button(root, text='nospiež mani', command=atb)
+btn.pack()
+
+atbilde2 = Label(root,text='Mans vards',font='32')
+atbilde2.pack()
+
+
+btn2 = Button(root, text='Iziet no progrāmmas', bg='red', fg='yellow', command=root.destroy )
+btn2.pack(side=BOTTOM)
 
 root.mainloop()
 
