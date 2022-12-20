@@ -8,9 +8,9 @@ root.title('Mans pirmais logs')
 
 def atb():
 	#atbilde2["text"] = atbilde.get()
-	atbilde2.config(text=atbilde.get())
+	atbilde2.config(text=('Mans vards ',atbilde.get()))
     
-info = Label(root,text="Sveiki, draugs! Ka tevi saus?",font='32')
+info = Label(root,text="Sveiki, draugs! Ka tevi saus?",font=('Arial',18, 'bold'))
 info.pack()
 
 atbilde = Entry(root)

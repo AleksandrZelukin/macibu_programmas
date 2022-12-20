@@ -63,3 +63,4 @@ for i in range(20):
             player_two.fd(20*die_outcome)
 
 
+turtle.mainloop()
