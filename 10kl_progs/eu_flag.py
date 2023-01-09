@@ -1,10 +1,9 @@
 import turtle
 a = turtle.Turtle()
-
 #a.shape('turtle')
-
-a.speed(1000)
-a.pencolor("black")
+a.hideturtle()
+a.speed(10)
+a.pencolor("blue")
 a.fillcolor("blue")
 a.up()
 a.goto(-300,-100)
