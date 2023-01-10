@@ -2,7 +2,7 @@ from tkinter import *
 
 a = Tk()
 a.title("Manas pogas")
-a.geometry("300x150")
+a.geometry("300x150+800+400")
 
 
 entry = Entry(font="32")
@@ -16,6 +16,7 @@ def display():
 
 def clear():
     entry.delete(0, END)
+    
     
 btn1 = Button(a, text="ievads", command=display)
 btn2 = Button(a, text="notirit", command=clear)
