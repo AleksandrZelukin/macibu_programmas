@@ -1,1 +1,1 @@
-# macibu_programmas
+# Skolotaja macibu programmas 
