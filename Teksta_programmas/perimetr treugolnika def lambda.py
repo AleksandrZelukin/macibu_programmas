@@ -4,7 +4,7 @@ c=int(input())
 
 if a+b>c and a+c>b and b+c>a:
     p=a+b+c
-    print(p)
+    print("trijsturis ekziste")
 
 else:
     print("trijsturis neekziste")
