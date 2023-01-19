@@ -9,9 +9,31 @@
 <p>JS piemeri</p>
 <img id="lighbulb" onclick="changeImage()" src="./pic_bulboff.gif" width="100" height="180">
 <p>Click the light bulb to turn on/off the light.</p>
+
 <p id="pirmais"></p>
 
+<script>
+
+function changeImage() {
+    var image = document.getElementById('lighbulb');
+    if (image.src.match("bulbon")) {
+        image.src = "pic_bulboff.gif";
+    } else {
+       image.src = "pic_bulbon.gif";
+   }
+}
+
+document.getElementById("pirmais").innerHTML = "Pirmais piemers";
+document.getElementById("pirmais").style.fontSize = "25px";
+document.getElementById("pirmais").style.color = "red";
+document.getElementById("pirmais").style.backgroundColor = "yellow";
+
+</script>
+
+
+
 <button id="first-button">Click me!</button>
+
 
 <button type="submit" id="submit">Nosiež mani</button>
 
