@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script><!--
+        function Complete1()
+        {
+            if(document.Sel3.Pwd.value==document.Sel3.Pwd1.value)
+                alert("Registracija veiksmiga\nID="+document.Sel3.Id.value+"\nPassword="+document.Sel3.Pwd.value);
+            else
+                alert("Kļūda\nMeģiniet atkāl!");
+        }
+        //-->
+    </script>
+</head>
+<body>
+<H1>Registrācija</H1>
+<FORM NAME="Sel3">
+    <TABLE>
+        <TR><TD><B>Lietotājs:<B></TD>
+            <TD><INPUT NAME="Id" SIZE=20
+                       onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+        <TR><TD><B>Parole:<B></TD>
+            <TD><INPUT TYPE="password" NAME="Pwd" SIZE=20
+                       onFocus="this.select();"></TD></TR>
+        <TR><TD><B>Parola pārbaude:<B></TD>
+            <TD><INPUT TYPE="password" NAME="Pwd1" SIZE=20
+                       onFocus="this.select();"></TD></TR>
+    </TABLE>
+    <INPUT TYPE="button" VALUE="Gatavs" onClick="Complete1();">
+    <INPUT TYPE="reset" VALUE="Reset">
+</FORM>
+</body>
+</html>
