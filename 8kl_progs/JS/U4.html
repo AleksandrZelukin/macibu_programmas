@@ -1,0 +1,15 @@
+﻿<canvas id="manaPamatne" width="200" height="200" style="border:1px solid black; background-color:khaki">
+</canvas>
+
+<script>
+var pamatne = document.getElementById("manaPamatne");
+var zimejums = pamatne.getContext("2d");
+var platums, augstums, x, y;
+platums = Number(prompt("Ievadi taisnstūra platumu"));
+augstums = Number(prompt("Ievadi taisnstūra augstumu"));
+
+x = 200 - 25 - platums;
+y = 200 - 40 - augstums;
+zimejums.lineWidth = 5;
+zimejums.strokeRect(x, y, platums, augstums);
+</script>

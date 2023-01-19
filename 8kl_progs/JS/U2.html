@@ -1,0 +1,12 @@
+﻿<canvas id="manaPamatne" width="200" height="200" style="border:1px solid black; background-color:gold">
+</canvas>
+
+<script>
+var pamatne = document.getElementById("manaPamatne");
+var zimejums = pamatne.getContext("2d");
+var x1, x2;
+x1 = Number(prompt("Ievadi taisnstūra kreisās malas koordināti x1"));
+x2 = Number(prompt("Ievadi taisnstūra labās malas koordināti x2"));
+//zimejums.strokeRect(15, 15, 50, 50);
+zimejums.strokeRect(x1, 15, x2 - x1, 50);
+</script>
