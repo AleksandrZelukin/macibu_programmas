@@ -1,6 +1,6 @@
 import sqlite3
 
-db = sqlite3.connect("data.db")
+db = sqlite3.connect("Python_MySQL_programmas/registracija_sqlite3.db")
 sql = db.cursor()
 sql.execute("""CREATE TABLE IF NOT EXISTS "users" (
     "username"  TEXT,
