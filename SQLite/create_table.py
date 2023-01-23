@@ -32,7 +32,7 @@ def create_table(conn, create_table_sql):
 
 
 def main():
-    database = r"SQLite/create_table.db"
+    database = (r"SQLite/create_table.db")
 
     sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
                                         id integer PRIMARY KEY,
