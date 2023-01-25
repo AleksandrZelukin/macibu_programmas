@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>patstāvīgais darbs</title>
+</head>
+<body>
+<h2>Jautājums</h2>
+<p>Reklāma</p>
+<div align="center">
+<marquee
+     id="logs" 
+     direction="left"
+     loop="7"
+     scrollamount="1"
+     scrolldelay="2"
+     behavior="alternate"
+     width="60%"
+     bgcolor="LightBlue"
+>
+............
+</marquee>
+</div>
+<p>Kāds šodien ir laiks?</p> 
+<script>
+// 1.uzdevums
+var atbilde = prompt("Kāds šodien ir laiks?")
+document.write(atbilde);
+// 2.uzdevums
+var vārds = prompt("Jūsu vārds")
+var uzvārds = prompt("Jūsu uzvārds")
+// alert("Lietotajs ir" + vārds +"  "+ uzvārds);
+document.write("Lietotajs ir" + vārds +"  "+ uzvārds);
+// 3.uzdevums
+var reklamasTeksts = prompt("Ievadi reklāmas tekstu");
+document.getElementById("logs").innerHTML = teksts;
+
+</script>
+</body>
+</html>
