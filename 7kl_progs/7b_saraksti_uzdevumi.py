@@ -1,7 +1,6 @@
-a = [34,45,12,23,4,56,12,73,45,16,23,56,]
+a=list(map(int, input().split()))
+#a = [34,45,12,23,4,56,12,73,45,16,23,56,]
 b = int(input("Ko meklējam?"))
-
-
 
 if b in a:
     print("Jā, ir!", b)
