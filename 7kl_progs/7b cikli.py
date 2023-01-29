@@ -1,8 +1,5 @@
-for i in range (2,10,2):
-    print(i)
+aa = [1, 2, 3, 4, 5, 6, 8]
 
-i = 1
-while i <10:
-     print(i)
-     i += 2
-    
+bb = aa[-2]
+
+print(bb)
