@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>vērtēšanas tabula</h2>
+<table style="width:100%" border="1px">
+    <tbody>
+        <tr>
+            <th></th>
+            <th colspan="10">Bales</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>apguves % no: </td>
+            <td>0%</td>
+            <td>12%</td>
+            <td>23%</td>
+            <td>38%</td>
+            <td>49%</td>
+            <td>60%</td>
+            <td>70%</td>
+            <td>78%</td>
+            <td>89%</td>
+            <td>95%</td>
+        </tr>
+        <tr>
+            <td>Punkti</td>
+            <td>0</td>
+            <td>3</td>
+            <td>5</td>
+            <td>9</td>
+            <td>11</td>
+            <td>14</td>
+            <td>16</td>
+            <td>18</td>
+            <td>20</td>
+            <td>22</td>
+        </tr>
+    </tbody>
+</table>
+
+<p></p>
+</body>
+</html>
