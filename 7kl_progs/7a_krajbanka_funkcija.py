@@ -5,7 +5,7 @@ def banka(nauda, likme, gadi):
     print(gadi," gads ",round(nauda,2))
 
 
-x = 1000000000
+x = 1000
 y = 0.3
 z = 10
 
