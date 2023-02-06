@@ -1,11 +1,8 @@
+def a(k=9,l=7):
+ return k+l
 
 m=4
 o=9
 
-def aa(k,l):
- return k+l
-
-
-
-e = aa(m,o)
+e = a()
 print(e)
