@@ -7,15 +7,6 @@ class Fig:
         self.w = w
         self.h = h
 
-    def tr_pr(self):
-        print (self.a + self.b + self.c)
-
-    def sq_pr(self):
-        print(4 * self.a)
-
-    def rect_pr(self):
-        p = self.w + self.h
-        print(p)
 
 
 Trijsturis = Fig(5,7,9)
