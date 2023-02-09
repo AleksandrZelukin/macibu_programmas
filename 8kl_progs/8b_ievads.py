@@ -1,7 +1,10 @@
-a=input("Lūdzu ievādit mainigo a:")
-a2 = input("Lūdzu ievādit mainigo a2:")
+a = "5"
+b = "Klase"
+
+c=[3,45,23,"Gool","Abba"]
+d=(3,45,23,"Gool","Abba")
 
 
 
-
-print(a+a2)
+print(c)
+print(d)
