@@ -1,11 +1,22 @@
+from flask import Flask, render_template, url_for, request, redirect
 import sqlite3
 
-db= sqlite3.connect('noma.db')
 
-cur = db.cursor()
+app = Flask(__name__)
 
-cur.execute("""CREATE TABLE IF NOT EXISTS nomnieks (
-    id_nomnieks INTEGER PRIMARY KEY AUTOINCREMENT,
+
+con= sqlite3.connect('noma.db')
+
+cur = con.cursor()
+
+# cur.execute("""CREATE TABLE IF NOT EXISTS nomnieks (
+#     id_nomnieks INTEGER PRIMARY KEY AUTOINCREMENT,
+#     vards TEXT NOT NULL,
+#     uzvards TEXT NOT NULL,
+#     talrunis TEXT
+#  )""")
+
+ cur.execute("""CREATE TABLE IF NOT EXISTS nomnieks (
     vards TEXT NOT NULL,
     uzvards TEXT NOT NULL,
     talrunis TEXT
@@ -27,36 +38,30 @@ cur.execute("""CREATE TABLE IF NOT EXISTS noma (
     FOREIGN KEY("id_nomnieks") REFERENCES "Nomnieks"("id_nomnieks")
  )""")
 
-# cur.execute("INSERT INTO nomnieks VALUES ('1','Aigars','Ozols','23234556')")
-# cur.execute("INSERT INTO nomnieks VALUES ('2','Olga','Piraga','23234556')")
-# cur.execute("INSERT INTO nomnieks VALUES ('3','Velta','Pludmale','23234556')")
-# cur.execute("INSERT INTO nomnieks VALUES ('4','Selga','Valnere','23234556')")
 
-# cur.execute("INSERT INTO instrumenti VALUES ('1','Urbis','02.12.2022',25)")
-# cur.execute("INSERT INTO instrumenti VALUES ('2','Urbis','14.12.2022',30)")
-# cur.execute("INSERT INTO instrumenti VALUES ('3','Knaibles','02.12.2022',12)")
-
-# cur.execute("INSERT INTO noma VALUES('1','1','3')")
-# cur.execute("INSERT INTO noma VALUES('2','3','3')")
-# cur.execute("INSERT INTO noma VALUES('3','4','3')")
-
-# cur.execute("""SELECT * FROM noma 
-#   JOIN nomnieks ON nomnieks.id_nomnieks = noma.id_nomnieks 
-#   JOIN instrumenti ON instrumenti.id_instruments = noma.id_instruments""")
-
-cur.execute("""SELECT vards, uzvards, instruments FROM noma 
-  JOIN nomnieks ON nomnieks.id_nomnieks = noma.id_nomnieks 
-  JOIN instrumenti ON instrumenti.id_instruments = noma.id_instruments""")
-
-# cur.execute("SELECT * FROM nomnieks, noma")
-
-db.commit()
-items = cur.fetchall()
-print(items)
-
-# for el in items:
-#     print(el[1] + "\n" + el[3])
+def user_to_db():
+    con = sqlite3.connect('noma.db')
+    cur = con.cursor()
+    cur.execute('INSERT INTO nomnieks(vards,uzvards,talrunis) VALUES (?,?,?)')
+    con.commit()
+    con.close()
 
 
 
-db.close()
+@app.route('/', methods=['POST', 'GET'])
+def index():
+    if request.method == "POST":
+        vards = request.form["vards"]
+        uzvards = request.form["uzvards"]
+        talrunis = request.form["talrunis"]
+
+        user_to_db(vards,uzvards,talrunis)
+        
+
+    return render_template("index.html")
+
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
