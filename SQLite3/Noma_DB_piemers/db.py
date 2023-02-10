@@ -31,7 +31,7 @@ cur.execute("""CREATE TABLE IF NOT EXISTS noma (
 # cur.execute("INSERT INTO nomnieks VALUES ('2','Olga','Piraga','23234556')")
 # cur.execute("INSERT INTO nomnieks VALUES ('3','Velta','Pludmale','23234556')")
 # cur.execute("INSERT INTO nomnieks VALUES ('4','Selga','Valnere','23234556')")
-cur.execute("INSERT INTO nomnieks VALUES ('Selga','Valnere','23234556')")
+# cur.execute("INSERT INTO nomnieks VALUES ('Selga','Valnere','23234556')")
 
 # cur.execute("INSERT INTO instrumenti VALUES ('1','Urbis','02.12.2022',25)")
 # cur.execute("INSERT INTO instrumenti VALUES ('2','Urbis','14.12.2022',30)")
