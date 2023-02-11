@@ -3,15 +3,16 @@ import sqlite3
 
 app = Flask(__name__)
 
-con = sqlite3.connect('noma.db')
-cur = con.cursor()
+db = sqlite3.connect('noma.db')
+cur = db.cursor()
 
 cur.execute("""CREATE TABLE IF NOT EXISTS nomnieks (
-    vards TEXT NOT NULL,
-    uzvards TEXT NOT NULL,
+    vards TEXT,
+    uzvards TEXT,
     talrunis TEXT
  )""")
-con.close()
+db.commit()
+
 
 @app.route('/')
 def index():
@@ -23,10 +24,11 @@ def nomnieks():
         vards = request.form["vards"]
         uzvards = request.form["uzvards"]
         talrunis = request.form["talrunis"]
-        cur = con.cursor()
         cur.execute('INSERT INTO nomnieks VALUES (?,?,?)')
 
-con.commit()
+db.commit()
 cur.close()
+
+
 if __name__ == "__main__":
     app.run(debug=True)
