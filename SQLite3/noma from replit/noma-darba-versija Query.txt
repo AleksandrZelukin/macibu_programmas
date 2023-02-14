@@ -1,0 +1,1 @@
+SELECT * FROM noma JOIN nomnieks ON nomnieks.id_nomnieks = noma.id_nomnieks JOIN instrumenti ON instrumenti.id_instruments = noma.id_instruments
