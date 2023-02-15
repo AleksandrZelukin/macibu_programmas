@@ -1,6 +1,6 @@
 from random import shuffle
 durvis = ['Dragon','Water','empty']
-life = 4
+life = 2
 count = 0
 
 while True:
@@ -9,15 +9,18 @@ while True:
     count += 100
     if choise <4:
         if durvis[choise-1] == 'Dragon':
-            print("Jūs zaudeja dzīvibu!")
-            life -=3
+            life -= 1
+            print("Dragon atņem dzīvibu","Palika dzīves: ",life)
+            
         if durvis[choise-1] == 'Water':
-            print("Jūs ieguva dzīvibu!")
             life +=1 
-        else:
-            print("Nekas nenotiek")
-        if life ==0:
-            print("Spēle beugusies. Jūsu konts: ",count) 
+            print("Water dod tev 1 dzīvibu","Palika dzīves: ",life)
+        
+        if durvis[choise-1] == 'Empty':   
+            print("Nekas nenotiek!")  
+        
+        if life == 0 :
+            print("Spēle beigusies. Jūsu konts: ",count) 
             break
     else:
         print("Durvis ar numuru", choise,"neekziste!")
