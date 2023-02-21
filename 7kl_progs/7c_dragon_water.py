@@ -30,6 +30,9 @@ while True:
                 print(rezultats)
                 break
     if jautajums == 'n':
+        print("Spēles kopums:")
+        for key in rezultats:
+            print(key, rezultats[key])
         break
 
 
