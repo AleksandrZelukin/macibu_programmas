@@ -17,4 +17,4 @@ sorted_things = dict(sorted(things.items(), key=lambda x: -x[1]))
 for k, v in sorted_things.items():
     if v <=  ves:
     	print(k, sep='/n')
-    	ves -= v
+    ves -= v
