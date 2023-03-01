@@ -1,4 +1,4 @@
-f = open("darbs_ar_failiem.txt","r") # Skātit fails
+f = open("7kl_progs/darbs_ar_failiem.txt","r") # Skātit fails
 for s in f:
     print(s, end='')
 f.close()
