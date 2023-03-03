@@ -1,4 +1,4 @@
-import string *
+from string import *
 import random
 
 suits = ['S', 'C', 'D', 'H']
