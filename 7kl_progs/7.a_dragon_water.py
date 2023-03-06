@@ -1,6 +1,6 @@
 from random import shuffle
-durvis = ['Dragon','Water','empty']
-life = 2
+durvis = ['Spoks','empty','empty']
+life = 1
 count = 0
 spele = {}
 while True:
@@ -11,18 +11,19 @@ while True:
         while True:
             choise = int(input("Durvju numurs: "))
             shuffle(durvis)
-            count += 100
+            count += 1
             if choise <4:
-                if durvis[choise-1] == 'Dragon':
-                    life -= 2
-                    print("Dragon atņem dzīvibu","Palika dzīves: ",life)
+                if durvis[choise-1] == 'Spoks':
+                    life -= 1
+                    print("Spoks atņem dzīvibu","Palika dzīves: ",life)
             
-                if durvis[choise-1] == 'Water':
+                if durvis[choise-1] == 'Empty':
                     life +=1 
-                    print("Water dod tev 1 dzīvibu","Palika dzīves: ",life)
+                    print("Spoka nav","Palika dzīves: ",life)
         
-                if durvis[choise-1] == 'Empty':   
-                    print("Nekas nenotiek!")  
+                if durvis[choise-1] == 'Empty': 
+                    life +=1  
+                    print("Spoka nav","Palika dzīves: ",life) 
         
                 if life <= 0 :
                     spele[vards] = count
