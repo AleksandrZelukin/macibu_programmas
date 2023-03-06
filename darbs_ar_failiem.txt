@@ -1,3 +1,4 @@
 Selga
 & C:/Users/azelukins/AppData/Local/Programs/Python/Python311/python.exe "c:/Users/azelukins/GitHub/macibu_programmas/7kl_progs/7b_darbs ar failiem.py"
 & C:/Users/azelukins/AppData/Local/Programs/Python/Python311/python.exe c:/Users/azelukins/GitHub/macibu_programmas/7kl_progs/7a_vardnica.py
+/usr/local/bin/python3 /Users/zelukin/Documents/GitHub/macibu_programmas/7kl_progs/7_spoku_spele.py
