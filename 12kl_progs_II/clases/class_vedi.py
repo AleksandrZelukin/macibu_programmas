@@ -9,8 +9,10 @@ class Viesis:
         print('parole '+f'{self.parole}'+ ' izveidota')
 
 # inkapsulacija
-vards = "Valdis" 
-parole = "123"
+# vards = "Valdis" 
+# parole = "123"
+vards = input()
+parole = input()
 
 viesis1 = Viesis(vards,parole)
 
@@ -21,6 +23,8 @@ viesis1.drukaParole()
 class Darbinieki(Viesis):
     def drukaVardu(self):
         print('Darbinieks '+f'{self.vards}'+ ' izveidots')
+
+
 
 vards = "Daina "
 parole = "AAAA"
