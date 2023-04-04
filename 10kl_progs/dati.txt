@@ -15,3 +15,5 @@ AA ZZZZZ
 ['Aleksandr', 'Sigulda']
 ['Aleksandr', 'Sigulda']
 ['AA', 'SS']
+['Anna', 'Liepajâ']
+['AA', 'asd']
