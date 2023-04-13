@@ -1,7 +1,7 @@
 # fom text.py
 from tkinter import *
 logs = Tk()
-logs.geometry("500x300+600+150")
+logs.geometry("600x300+600+150")
 logs.title('Mana pirma programma') 
 
 def get_text():
@@ -9,7 +9,7 @@ def get_text():
 
 def remove_text():
     label2.config(text="")
- 
+    
 def iziet():
     logs.destroy()
 
@@ -18,6 +18,9 @@ label1.grid(row=0,column=0)
 
 text = Entry()
 text.grid(row=0,column=1)
+
+text2 = Text(width=25, height=2)
+text2.grid(row=0,column=3)
 
 btn1=Button(text="Paņemt",command=get_text)
 btn1.grid(row=0,column=2)
