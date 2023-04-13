@@ -1,0 +1,12 @@
+
+"venta"venta
+"gauja"gauja
+"daugavabeigas"daugavabeigas
+""
+"& C:/Users/azelukins/AppData/Local/Programs/Python/Python311/python.exe \"//ri.riga.lv/r92vs/Darbinieki/azelukins/My Documents/7a/darbs ar  failiem.py\""& C:/Users/azelukins/AppData/Local/Programs/Python/Python311/python.exe "//ri.riga.lv/r92vs/Darbinieki/azelukins/My Documents/7a/darbs ar  failiem.py"
+"& C:/Users/azelukins/AppData/Local/Programs/Python/Python311/python.exe \"//ri.riga.lv/r92vs/Darbinieki/azelukins/My Documents/7a/darbs ar  failiem.py\""& C:/Users/azelukins/AppData/Local/Programs/Python/Python311/python.exe "//ri.riga.lv/r92vs/Darbinieki/azelukins/My Documents/7a/darbs ar  failiem.py"
+"Zelma"Zelma
+"Daiga"Daiga
+"Selga"Selga
+"Laima"Laima
+"beigas"beigas

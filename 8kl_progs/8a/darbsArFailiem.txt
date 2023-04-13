@@ -1,0 +1,6 @@
+51
+134
+Summa skaitlus a un b ir:  143
+Summa skaitlus 23 un 45 ir:  68
+78 + 33 = 111
+34 + 17 = 51

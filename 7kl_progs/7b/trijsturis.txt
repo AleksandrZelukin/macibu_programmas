@@ -1,0 +1,3 @@
+Tas ir trijsturis, lenķi šādi: 30, 30, 120
+Tas ir trijsturis, lenķi šādi: 50, 70, 60
+Tas ir trijsturis, lenķi šādi: 12, 36, 132

@@ -1,0 +1,4 @@
+
+Trijsturis ar malam a= 34,b = 32, c = 36 ekziste!
+Trijsturis ar malam a= 23,b = 24, c = 17 ekziste!
+Trijsturis ar malam a= 12,b = 23, c = 12 ekzistç!

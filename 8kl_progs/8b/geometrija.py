@@ -1,0 +1,55 @@
+from turtle import *
+
+speed(100)
+screensize(bg="lightblue")
+krasa=("red","brown","yellow","blue","lightblue")
+up()
+goto(-300,200)
+down()
+fillcolor(krasa[2])
+pencolor(krasa[2])
+begin_fill()
+circle(50) #saulite
+goto(-300,250)
+for i in range(18):
+    fd(100)
+    backward(100)
+    lt(20)
+end_fill()
+up()
+goto(-100,-380)
+down()
+fillcolor(krasa[1])
+begin_fill()
+for i in range(4): #Sienas
+    fd(200)
+    lt(90)
+end_fill()    
+up()
+goto(-125,-180)
+down()
+fillcolor(krasa[0])
+begin_fill()
+for i in range(3): #jumta
+    fd(250)
+    lt(120)
+end_fill()
+up()
+goto(0,-120)
+down()
+fillcolor(krasa[4])
+begin_fill()
+circle(25) #jumtas logs
+end_fill()
+up()
+goto(-80,-200)
+down()
+fillcolor(krasa[4])
+begin_fill()
+for i in range(4): #logs
+    fd(80)
+    lt(-90)
+end_fill()
+
+
+done()

@@ -1,0 +1,31 @@
+from turtle import *
+fillcolor('yellow')
+pencolor('yellow')
+screensize(bg='blue')
+speed(100)
+figura=textinput('Figura?', 'Kada figura?')
+if figura == 'zvaigzne':
+    up()
+    goto(0,0)
+    down()
+    begin_fill()
+    lt(72)
+    for i in range(5):
+        fd(200)
+        rt(144)
+    end_fill()
+    pencolor('red')
+    write('zvaigzne',font=('Helvetica',24,'italic'))
+if figura == 'kvadrats':
+    up()
+    goto(0,0)
+    down()
+    begin_fill()
+    lt(90)
+    for i in range(4):
+        fd(200)
+        rt(90)
+    end_fill()
+    pencolor('red')
+    write('kvadrats',font=('Arial',24,'italic'))
+done()

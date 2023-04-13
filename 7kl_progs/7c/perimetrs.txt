@@ -1,0 +1,5 @@
+Kvadrata perimetrs ar malu  196 ir:  784
+Kvadrata perimetrs ar malu  3 ir:  12
+Kvadrata perimetrs ar malu  17 ir:  68
+Kvadrata perimetrs ar malu  24 ir:  96
+Kvadrata perimetrs ar malu  3 ir:  12

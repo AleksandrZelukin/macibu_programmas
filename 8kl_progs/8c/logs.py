@@ -1,0 +1,16 @@
+from turtle import *
+krasa=("brown","red","blue","green","yellow","lightblue")
+
+up()
+goto(-50,-250)
+down()
+fillcolor(krasa[5])
+begin_fill()
+fd(100)
+rt(90)
+fd(80)
+rt(90)
+fd(100)
+rt(90)
+fd(80)
+end_fill()
