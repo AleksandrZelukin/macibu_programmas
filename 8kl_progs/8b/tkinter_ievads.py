@@ -9,8 +9,11 @@ def izeja():
     
 data = StringVar()
 
+# def vards():
+#     label3.config(data.get()) 
+    
 def vards():
-    label3.config(data.get()) 
+    label3["text"] = entry1.get()
     
     
 label1 = Label(text='Hello world!')
