@@ -1,25 +1,28 @@
+# fom text.py
 from tkinter import *
-win = Tk()
-win.geometry('800x800+700+150')
+logs = Tk()
+logs.geometry("400x400")
+ 
 
-data = StringVar()
+ 
+def get_text():
+    label['text'] = text.get()
+ 
+def iziet():
+    logs.destroy()
 
-def izeja():
-    win.destroy()
+ 
+text = Entry()
+text.grid(row=0,column=0)
 
+btn1=Button(text="Paņemiet",command=get_text)
+btn1.grid(row=0,column=1)
 
-def vards():
-    label2["text"] = entry1.get()
+btn2=Button(text="Beigt",command=iziet)
+btn2.grid(row=1,column=1)
 
-label1 = Label(text='Jusu vārds',font=('Arial','24'),bg='green',fg='blue').pack()
+label = Label()
+label.grid(row=2,column=0)
 
-entry1 = Entry(textvariable=data).pack()
-
-btn1 = Button(text='Press me!',font=('Arial','24'),bg='red',fg='yellow',command=vards).pack()
-
-label2 = Label( font=('Arial','24'),fg='blue').pack()
-
-btn2 = Button(text="Izeja",font=('Arial','24'),bg='red',fg='yellow',command=izeja).pack()
-
-
-win.mainloop()
+ 
+logs.mainloop()
