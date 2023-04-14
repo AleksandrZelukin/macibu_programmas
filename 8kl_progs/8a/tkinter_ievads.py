@@ -1,25 +1,38 @@
+# fom text.py
 from tkinter import *
-win = Tk()
-win.geometry('800x800+700+150')
+logs = Tk()
+logs.geometry("600x300+600+150")
+logs.title('Mana pirma programma') 
 
-data = StringVar()
+def get_text():
+    label2['text'] = text.get()
 
-def izeja():
-    win.destroy()
+def remove_text():
+    label2.config(text="")
+    
+def iziet():
+    logs.destroy()
 
+label1=Label(text='uzraksti savu vārdu')
+label1.grid(row=0,column=0)
 
-def vards():
-    label2 = entry1.get()
+text = Entry()
+text.grid(row=0,column=1)
 
-label1 = Label(text='Jusu vārds',font=('Arial','24'),bg='green',fg='blue').pack()
+text2 = Text(width=25, height=2)
+text2.grid(row=0,column=3)
 
-entry1 = Entry(textvariable=data).pack()
+btn1=Button(text="Paņemt",command=get_text)
+btn1.grid(row=0,column=2)
 
-btn1 = Button(text='Press me!',font=('Arial','24'),bg='red',fg='yellow',command=vards).pack()
+btn2=Button(text="Beigt",command=iziet)
+btn2.grid(row=2,column=1)
 
-label2 = Label(font=('Arial','24'),fg='blue').pack()
+btn3=Button(text="Dzest",command=remove_text)
+btn3.grid(row=1,column=1)
 
-btn2 = Button(text="Izeja",font=('Arial','24'),bg='red',fg='yellow',command=izeja).pack()
+label2= Label()
+label2.grid(row=1,column=0)
 
-
-win.mainloop()
+ 
+logs.mainloop()
