@@ -43,9 +43,10 @@ r2 = Checkbutton(text='Nē')
 r2.grid(row=1,column=1)
 
 label3 = Label()
-label3.grid(row=1,column=1)
+label3.grid(row=1,column=3)
 
 btn2 = Button(text='iziet',fg='yellow',bg='red',command=izeja)
 btn2.grid(row=8,column=3)
-
+w2 = Scale(logs, from_=0, to=200, length=600,tickinterval=10, orient=HORIZONTAL)
+w2.grid(row=7,column=0, columnspan=6)
 logs.mainloop()
