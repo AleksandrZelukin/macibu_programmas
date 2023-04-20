@@ -2,7 +2,7 @@ from tkinter import *
 
 logs = Tk()
 
-logs.geometry('600x400+800+200')
+logs.geometry('610x400+800+200')
 
 def izeja():
     logs.destroy()
