@@ -6,13 +6,16 @@ logs.title('Mana pirma programma')
 def get_text():
     label2['text'] = text.get()
 
+def get_text2():
+    label2['text'] = text2.get(1.0, END)
+
 def remove_text():
     label2.config(text="")
     
 def iziet():
     logs.destroy()
 
-def insert_text():
+def insert_text2():
     s = text.get()
     text2.insert(1.0, s)
 
@@ -34,7 +37,7 @@ text2.grid(row=0,column=3)
 btn1=Button(frame1,text="Paņemt",command=get_text)
 btn1.grid(row=0,column=2)
 
-btn4=Button(frame1,text='Iekļaut',command=insert_text)
+btn4=Button(frame1,text='Iekļaut',command=insert_text2)
 btn4.grid(row=0,column=4)
 
 btn2=Button(text="Beigt",command=iziet)
