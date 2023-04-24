@@ -1,8 +1,8 @@
 import PySimpleGUI as sg
 layout = [[sg.Text("Cik nodot atlikumā?")],
-          [sg.InputText('')],
+          [sg.InputText('',size=6)],
           [sg.Text('',key='radit')],
-          [sg.Multiline(size =(80,6),key = '_multiline_')],
+          [sg.Multiline(size =(60,6),key = '_multiline_')],
           [sg.Button('Aprēķinat', key='s'),sg.Button('Beigt', key='q')]]
 
 logs = sg.Window('KASE', layout)

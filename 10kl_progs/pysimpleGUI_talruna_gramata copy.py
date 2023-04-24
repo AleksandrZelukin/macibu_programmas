@@ -2,15 +2,15 @@ from PySimpleGUI import Text, InputText,Button,Window,WINDOW_CLOSED
 import csv
 
 izkartojums = [[Text('Vārds')],
-               [InputText()],
+               [InputText(key='-vards-')],
                [Text('Talruna numurs')],
-               [InputText('(+371)')],
+               [InputText('(+371)',key='-num-')],
                [Button('Saglabāt', key='s'),Button('Beigt', key='q')]]
 
-logs = Window('Virsrāksts', izkartojums)
+win = Window('Virsrāksts', izkartojums)
 phonebook=[]
 while True:
-    event, values = logs.read()
+    event, values = win.read()
     if event == WINDOW_CLOSED or event == 'q':
       break
     if event == 's':
@@ -20,5 +20,5 @@ while True:
       # phonebook.append(values[1])
       with open('talruna_gramata.csv', 'a') as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow({values[0],values[1]})
+        writer.writerow({values["-num-"],values["-vards-"]})
 
