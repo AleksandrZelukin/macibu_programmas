@@ -1,18 +1,27 @@
 from tkinter import *
 logs = Tk()
-logs.geometry('800x600+600+100')
-
+logs.geometry('800x800+600+100')
+logs.title('Visas krāsas varaviksnē')
 def izeja():
     print('Programma beidza savu darbu')
     logs.destroy()
-
-
-   
-label1=Label(logs,text="Sveiki!",fg='blue',font=('Arial',32))
+ 
+label1=Label(logs,text="Visas krāsas varaviksnē",fg='blue',font=('Arial',32))
 label1.pack()
 
-
 label2=Label(font=('Arial',32))
-btn1=Button(logs,text='Dažadu krāses poga', fg='yellow',bg='blue',font=('Arial',32),command=izeja)
-btn1.pack()
+btn1=Button(logs,text='Red', fg='#000000',bg='#ff0000',font=('Arial',32),width=22)
+btn1.pack(pady=10)
+btn1=Button(logs,text='Orange', fg='#000000',bg='#00a500',font=('Arial',32),width=22)
+btn1.pack(pady=10)
+btn1=Button(logs,text='Yellow', fg='#000000',bg='#ffff00',font=('Arial',32),width=22)
+btn1.pack(pady=10)
+btn1=Button(logs,text='Green', fg='#000000',bg='#008000',font=('Arial',32),width=22)
+btn1.pack(pady=10)
+btn1=Button(logs,text='Blue', fg='#000000',bg='#0000ff',font=('Arial',32),width=22)
+btn1.pack(pady=10)
+btn1=Button(logs,text='Indigo', fg='#000000',bg='#4b0082',font=('Arial',32),width=22)
+btn1.pack(pady=10)
+btn1=Button(logs,text='Violet', fg='#000000',bg='#ee82ee',font=('Arial',32),width=22)
+btn1.pack(pady=10)
 mainloop()
