@@ -2,12 +2,12 @@
 
 while True:
     print("Nulle - iziet no programmas")
-    a = input("Izvēleis figuru:\n1- trīsstūris\n2- aplis\n3- taisnstūris\n4- rombs\n5- trapece")
+    a = input("Izvēleis figuru:\n1- trīsstūris\n2- aplis\n3- taisnstūris\n4- rombs\n5- trapece\n")
     
     if a=="1":
         print("trīsstūris")
         def triangle(a,b):
-        return a*b/2
+            return a*b/2
         x = float(input("pirmais katets= "))
         y = float(input("otrais katets= "))
         d = triangle(x,y)
