@@ -1,6 +1,9 @@
 from turtle import *
 
 def kvadrats():
+    x=int(textinput('koordinates', 'X'))
+    y=int(textinput('koordinates', 'Y'))
+    a=int(textinput('Malu izmers', 'cik?'))
     up()
     goto(x,y)
     down()
@@ -8,12 +11,8 @@ def kvadrats():
         fd(a)
         lt(90)
 
-x=int(textinput('koordinates', 'X'))
-y=int(textinput('koordinates', 'Y'))
-a=int(textinput('Malu izmers', 'cik?'))
+
 
 kvadrats()
-x=int(textinput('koordinates', 'X'))
-y=int(textinput('koordinates', 'Y'))
 kvadrats()
 mainloop()
