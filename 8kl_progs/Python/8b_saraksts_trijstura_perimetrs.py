@@ -11,3 +11,5 @@ while True:
         print('Trijstruris neekziste')
     perimetrus_saraksts.append(p)
     print(perimetrus_saraksts)
+
+    
