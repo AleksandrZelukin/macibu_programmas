@@ -4,13 +4,13 @@
 # get_name_and_decades("Leo", 31)
 
 
-for i in range(5):
-    if i % 2 ==0:
-        continue
-    print(i)
+# for i in range(5):
+#     if i % 2 ==0:
+#         continue
+#     print(i)
 
-
-
+a = float(2)
+print(a)
 
 
 
