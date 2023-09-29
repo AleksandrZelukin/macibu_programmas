@@ -1,5 +1,0 @@
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .cache/replit/modules/python-3.10:v26-20230926-7459cc2","time":"2023-09-28T17:30:28Z"}
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .pythonlibs/lib/python3.10/site-packages/PySimpleGUI/__init__.py","time":"2023-09-28T17:30:28Z"}
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .pythonlibs/lib/python3.10/site-packages/PySimpleGUI-4.60.5.dist-info/WHEEL","time":"2023-09-28T17:30:28Z"}
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .pythonlibs/lib/python3.10/site-packages/PySimpleGUI-4.60.5.dist-info/entry_points.txt","time":"2023-09-28T17:30:28Z"}
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .pythonlibs/lib/python3.10/site-packages/PySimpleGUI-4.60.5.dist-info/top_level.txt","time":"2023-09-28T17:30:28Z"}
