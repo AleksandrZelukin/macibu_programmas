@@ -14,7 +14,7 @@ c.execute("""CREATE TABLE IF NOT EXISTS articles (
  )""")
 
 # Добавление данных
-c.execute("INSERT INTO articles VALUES ('Amazon is cool!', 'Amazon is really cool', 400, 'Modest')")
+c.execute("INSERT INTO articles VALUES ('Amazon is cool2!', 'Amazon is really cool', 400, 'Modest')")
 
 # Удаление данных
 c.execute("DELETE FROM articles WHERE avtor = 'Admin'")
