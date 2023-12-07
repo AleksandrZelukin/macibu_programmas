@@ -1,7 +1,7 @@
 while True:
     a = float(input("Pirmais skaitlis: "))
     b = float(input("Otrais skaitlis: "))
-    c = 
+    
     print("Ko darīsim? * / - +")
     s = input("press end for exit!")
 
