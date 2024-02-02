@@ -9,6 +9,6 @@ label1.pack()
  
 poetry = "Вот мысль, которой весь я предан,\nИтог всего, что ум скопил.\nЛишь тот, кем бой за жизнь изведан,\nЖизнь и свободу заслужил."
 label2 = Label(text=poetry, justify=LEFT)
-label2.place(relx=.2, rely=.3)
+label2.place(relx=.1, rely=.3)
  
 root.mainloop()
