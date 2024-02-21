@@ -63,3 +63,5 @@ goto(160,-200)
 goto(160,-100)
 goto(50,-100)
 end_fill()
+
+mainloop()
