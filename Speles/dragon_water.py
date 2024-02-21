@@ -23,7 +23,7 @@ while True:
     score += 100
     if doors[choice - 1] == 'dragon':
         print('Jūs cīnījāties ar pūķi un zaudējāt dzīvību.')
-        lives -= 1
+        lives -= -3
     elif doors[choice - 1] == 'water':
         print('Jūs dzērāt dzīvo ūdeni un ieguvāt dzīvību.')
         lives += 1 
