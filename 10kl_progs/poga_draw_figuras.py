@@ -6,7 +6,7 @@ logs = tu.Screen()
 logs.setup(800,600)
 tu.pensize(4)
 tu.shape('turtle')
-tu.speed(1000)
+tu.speed(10)
 krasa = ['red','pink','yellow','blue','green','orange']
 
 def zvaigzne():
