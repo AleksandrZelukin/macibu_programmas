@@ -1,0 +1,5 @@
+c = (12,34,56,12,34,24,78)
+f = list(c)
+f.append(568)
+c = tuple(f)
+print(c)
