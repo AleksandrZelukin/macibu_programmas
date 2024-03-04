@@ -1,4 +1,5 @@
 from turtle import *
+import tkinter as tk
 
 t = Turtle()
 t.shape("turtle")
@@ -17,7 +18,7 @@ def figura(x,y,z,n,k):
         t.lt(360/n)
     t.end_fill()
 
-def saule(x,y,z,k=2):
+def saule(x=-250,y=200,z=200,k=2):
     t.pu()
     t.goto(x,y)
     t.pd()
@@ -28,9 +29,16 @@ def saule(x,y,z,k=2):
         t.fd(z)
         t.bk(z)
         t.lt(30)
+    t.goto(x,y-(z/2))
+    t.circle(80)
     t.end_fill()
+
+poga1 = tk.Button(text = "Saule",command=saule)
+poga1.pack()
 
 siena = figura(-200,-380,300,4,3)
 durvis = figura(-80,-380,80,4,5)
 jumta = figura(-225,-80,350,3,1)
-sun = saule(-200,300,200)
+
+
+mainloop()
