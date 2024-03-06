@@ -1,10 +1,12 @@
 from turtle import *
 import tkinter as tk
+from tkinter import *
 
 t = Turtle()
 t.shape("turtle")
+
 t.pensize(4)
-krasa = ("red","blue","yellow","brown","orange","navy")
+krasa = ("red","blue","yellow","brown","orange","navy","lightblue")
 
 
 def figura(x,y,z,n,k):
@@ -37,7 +39,7 @@ poga1 = tk.Button(text = "Saule",command=saule)
 poga1.pack()
 
 siena = figura(-200,-380,300,4,3)
-durvis = figura(-80,-380,80,4,5)
+durvis = figura(-80,-380,80,4,2)
 jumta = figura(-225,-80,350,3,1)
 
 

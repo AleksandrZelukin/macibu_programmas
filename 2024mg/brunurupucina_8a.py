@@ -1,17 +1,31 @@
 from turtle import *
+import tkinter as tk
+t = Turtle()
+
 krasa = ("red","yellow","blue","lightblue")
 speed(1000)
-pu()
-goto(-300,200)
-pd()
-fillcolor(krasa[1])
-pencolor(krasa[1])
-begin_fill()
-for i in range(36):
-    fd(200)
-    rt(180)
-    rt(10)
-end_fill()
+def saule():
+    pu()
+    goto(-300,200)
+    pd()
+    fillcolor(krasa[1])
+    pencolor(krasa[1])
+    begin_fill()
+    for i in range(36):
+        fd(200)
+        rt(180)
+        rt(10)
+    end_fill()
+poga1 = tk.Button(text="SAULE",command=saule)
+poga1.place(x=260,y=180)
+poga2 = tk.Button(text="SIENA")
+poga2.place(x=40,y=70) 
+poga3 = tk.Button(text="DURVIS")
+poga3.place(x=40,y=100)
+poga4 = tk.Button(text="JUMTA")
+poga4.place(x=40,y=130)
+poga5 = tk.Button(text="LOGS")
+poga5.place(x=40,y=160)  
 pencolor(krasa[0])
 def figura(x,y,z,n,m):
     pu()

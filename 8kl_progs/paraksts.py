@@ -6,3 +6,4 @@ pencolor(krasa[6])
 down()
 write('Sveiciens no skolotāja!',font=("Arial",18,"italic"))
 
+mainloop()

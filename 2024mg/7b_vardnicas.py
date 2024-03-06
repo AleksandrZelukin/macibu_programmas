@@ -13,12 +13,12 @@ for i in c.items():
     print(i)
 '''
 while True:
-    pilseta = input("Pilsēta: ")
-    valsts = input("valsts: ")
-    if pilseta =="none" and valsts=="none":
+    vards = input("Drauga vārds: ")
+    talrunis = input("Tālruna numurs: ")
+    if vards =="none" and talrunis=="none":
         for i in c.keys():
             print(c[i],i)
         break
-    c[pilseta] = valsts
+    c[vards] = talrunis
     
 

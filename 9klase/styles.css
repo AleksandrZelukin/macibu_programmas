@@ -1,0 +1,35 @@
+body {
+    background-color: burlywood;
+
+}
+h1 {
+    background-color: chartreuse;
+    padding-left: 50%;
+
+}
+.virsraksts {
+    color: blueviolet;
+    font-size: 36px;
+}
+#A {
+    color:green;
+    font-size: 18px;
+    padding-left: 40%;
+    
+}
+img {
+    width: 120px;
+    padding-left: 20%;
+}
+
+.mape {padding-left: 30%;}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #002e7a;
+    color: white;
+    text-align: center;
+  }
+  #B {text-align: center;}
