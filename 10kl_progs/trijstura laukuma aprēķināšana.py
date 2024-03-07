@@ -23,7 +23,9 @@ def s():
   
   rez = (pirmais*otrais)/2
   rezultats.configure(text = rez)
-
+  f = open("trijstura_laukuma_aprekinosana.txt","a")
+  print(f"Trijstura ar katetam {pirmais} un {otrais} laukums ir {rez}", file=f)
+  f.close()
 
 btn1 = Button(text="parādīt aprēķina rezultātu",command=s)
 btn1.pack()

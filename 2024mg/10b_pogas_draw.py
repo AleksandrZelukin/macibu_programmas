@@ -28,3 +28,5 @@ poga3 = tk.Button(text="sešsturis",command=sesturis)
 poga3.place(x=50,y=110)
 poga4 = tk.Button(text="notirit visu",bg = "red",fg="yellow" ,command=notirit)
 poga4.place(x=50,y=140)
+
+tk.mainloop()
