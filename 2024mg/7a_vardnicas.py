@@ -13,7 +13,8 @@ for i in talruni.items():
 while True:
     vards = input("Vārds: ")
     talrunis = input("talrunis: ")
-    if vards =="none" and talrunis=="none":
-        break
+    
     talruni[vards] = talrunis
     print(talruni)
+    if vards =="none" and talrunis=="none":
+           break
