@@ -39,7 +39,24 @@
 	</tr>
 </table>
 </div>
-<div><h2>Mani sauc Aleksandrs!</h2></div>
+<div><h2>Mans vārds Aleksandrs!</h2></div>
+<script>
+var formas = new Array("e-resize", "ne-resize", "n-resize", "se-resize");
+var numurs = 1;
+var virziens = 1;
+function pagriezt() {
+    document.body.style.cursor = formas[numurs];
+    numurs++;
+    if (numurs==formas.length) {
+        numurs=0;
+    }
+    setTimeout("pagriezt()",100);
+}
+if (virziens) {
+    formas.reverse();
+}
+window.onload = pagriezt;
+</script>
 
 </body>
 </html>

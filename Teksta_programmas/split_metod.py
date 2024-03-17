@@ -1,0 +1,6 @@
+A = list(map(int,input().split()))
+B = input().split()
+C = tuple(map(int,input().split()))
+print(A)
+print(B)
+print(C)

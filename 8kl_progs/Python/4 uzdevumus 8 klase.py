@@ -4,7 +4,7 @@ Programma pieprasa Kārļa trīs atzīmes un izskaitļo vidējo aritmētisko. (2
 Kārlis noperka M kg abolu maksājot C centus par kg. Cik centus X ir jāsamaksa par pirkumu? Cik atlikuma centus S viņš dabūs no L eiro? (4.punkti)
 Annai ir a gadi, bet Marutai - m gadi. Kas no viņam ir vecāka? (2.punkti)
 Pļavā rotaļājas bērni un suņi. Zinot galvu un kāju kopējo skaitu (g un k), atrast, cik bērnu un cik suņu ir pļavā (b un s). (6.punkti)
-'''
+
 #1 
 a = int(input("Ievadiet kvadrata malu: "))
 p=a*4
@@ -26,13 +26,13 @@ M = int(input("aboli kg:"))
 C = float(input("cena par kilo: "))
 x=L-(M*C)
 print("atlikums:",x)
-
+'''
 #4
 Anna = int(input("Annai:"))
 Maruta = int(input("Marutai:"))
 if Anna > Maruta:
-    print("Anna vecaka Marutai")
+    print("Anna ir vecāka par Maruta")
 else:
-    print("Maruta vecaka Annai")
+    print("Maruta ir vecāka par Annu")
     
 

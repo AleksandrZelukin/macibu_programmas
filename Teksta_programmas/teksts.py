@@ -19,3 +19,5 @@ turtle.bgcolor(0,1,0)
 
 
 turtle.write("Sveiki!",align="center", font=("Times New Roman", 40, "bold"))
+
+turtle.mainloop()

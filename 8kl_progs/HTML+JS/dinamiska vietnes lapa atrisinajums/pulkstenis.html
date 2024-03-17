@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<script>
+var datums;
+var sekunde = 1000;
+var tid = 0;
+function veidot() {
+    f.logs.value = new Date();
+    tid = window.setTimeout("veidot()",sekunde);
+}
+</script>
+<body onload="start(document.datums);" >
+<h1>Pulkstenis</h1>
+<form name="datums" action="post">
+    <input type="text" name="logs" size=50>
+</form>
+<script>
+function start(x) {
+    f = x;
+    tid = window.setTimeout("veidot()",sekunde);
+}
+function cleartid() {
+    window.clearTimeout(tid);
+}
+</script>
+</body>
+</html>

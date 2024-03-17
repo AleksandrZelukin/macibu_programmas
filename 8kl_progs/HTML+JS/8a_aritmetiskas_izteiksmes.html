@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>2. vingrinājums</h2>
+   <p>Izmantojot dotos mainīgos, <br>aprēķināt mainīgā a vērtību pēc formulas:
+    Rezultātu <br>izvadīt paziņojuma lodziņā.<br>
+    a=(2b+c)/(d-e)</p>
+    <h2>3.vingrinajums</h2>
+    <p>Veikt aprēķinus un izvadīt rezultātus:
+        <ol>
+            <li>Aprēķināt riņķa līnijas garumu (C = 2r), izmantojot Math.PI.</li>
+            <li>Noapaļot aprēķināto vērtību, izmantojot Math.round un piešķirt mainīgajam vesels.</li>
+            <li>Kāpināt mainīgā x vērtību mainīgajā pakape norādītajā pakāpē, izmantojot Math.pow, un rezultātu piešķirt mainīgajam y.</li>
+            <li>Izvilkt kvadrātsakni no mainīgā y, izmantojot Math.sqrt un rezultātu saglabāt mainīgajā z.</li>
+            <li>Noteikt mainīgo x un r starpības moduli, izmantojot Math.abs un rezultātu saglabāt mainīgajā a.
+            </li>
+
+        </ol>  
+    </p>
+     <p>
+       <h2>4. vingrinājums</h2> 
+       <ol>
+            <li>Papildināt skriptu ar otra skaitļa ievadi.</li>
+            <li>Izveidot priekšrakstu ievadīto skaitļu summas izvadei.</li>
+            <li>Izveidot priekšrakstu ievadīto skaitļu starpības izvadei.</li>
+            <li>Pārbaudīt skripta darbību (iegūto rezultātu pareizību).</li>
+            <li>Papildināt ievadi ar funkcijas izmantošanu ievadīto datu pārveidošanai skaitļos.</li>
+            <li>Pārbaudīt skripta darbību (iegūto rezultātu pareizību).</li>
+       </ol>
+     </p>   
+       
+<script>
+    // 2.vingrinajums
+    var perimetrs;
+    var r = 5;
+    var vesels;
+    var pakāpe = 2;
+    var x = 3;
+    var z;
+    var a;
+    perimetrs = 2 * Math.PI() * r;
+    document.write(r);
+    vesels = Math.round(perimetrs);
+    document.write(vesels);
+    y = Math.pow(x, pakāpe);
+    document.write(y);
+    z = Math.sqrt(y);
+    document.write(z);
+    a = Math.abs(x - r);
+    // document.write(a);
+    alert(a);
+    </script>
+    <script>
+        // 3.vingrinajums
+        var perimetrs;
+var r = 5;
+var vesels;
+var pakāpe = 2;
+var x = 3;
+var z;
+var a;
+perimetrs = 2 * Math.PI * r;
+document.writeln(r);
+vesels = Math.round(perimetrs);
+document.writeln(vesels);
+y = Math.pow(x, pakāpe);
+document.writeln(y);
+z = Math.sqrt(y);
+document.writeln(z);
+a = Math.abs(x - r);
+document.writeln(a);
+
+    </script>
+    <script>
+        // 4.vingrinajums
+        //var skaitlis1 = prompt("Ievadi pirmo skaitli");
+        //var skaitlis2 = prompt("Ievadi otro skaitli");
+        var skaitlis1 = Number(prompt("Ievadi pirmo skaitli"));
+        var skaitlis2 = Number(prompt("Ievadi otro skaitli"));
+
+alert(skaitlis1 + skaitlis2);
+alert(skaitlis1 - skaitlis2);
+    </script>
+
+  </body>  
+</html>

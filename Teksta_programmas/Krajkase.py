@@ -1,9 +1,8 @@
 
 summa = float(input("Cik tev ir? "))
-#summa2 = float(input("Cik tu grībi? "))
+summa2 = float(input("Cik tu grībi? "))
 procent = float(input("Gadā Procentu likme: "))
 count = 0 
-
 
 while summa < summa2:
     summa += summa*(procent/100) 

@@ -1,0 +1,13 @@
+﻿<canvas id="manaPamatne" width="200" height="200" style="border:2px solid LawnGreen; background-color:lavender">
+</canvas>
+
+<script>
+var pamatne = document.getElementById("manaPamatne");
+var zimejums = pamatne.getContext("2d");
+var mala, x, y;
+mala = Number(prompt("Ievadi kvadrāta malas garumu"));
+
+x = (200 - mala) / 2;
+y = x;
+zimejums.fillRect(x, y, mala, mala);
+</script>

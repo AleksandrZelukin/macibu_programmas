@@ -6,7 +6,7 @@ while True:
     if choice == 'y':
         players = input('Tavs vards:  ')
         doors = ['dragon', 'water', 'empty']
-        lives = 3
+        lives = 1
         score = 0
         while True:
             choice = int(input('Ievādi durvu numuru (1, 2 vai 3): '))

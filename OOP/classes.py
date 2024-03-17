@@ -1,6 +1,6 @@
 #Piemers 1
 class A:
-    pass
+   pass
 
 #Piemers 2
 class B: 

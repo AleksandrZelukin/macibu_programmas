@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title></title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<p>JS piemeri</p>
+<img id="lighbulb" onclick="changeImage()" src="./pic_bulboff.gif" width="100" height="180">
+<p>Click the light bulb to turn on/off the light.</p>
+
+<p id="pirmais"></p>
+
+<script>
+
+function changeImage() {
+    var image = document.getElementById('lighbulb');
+    if (image.src.match("bulbon")) {
+        image.src = "pic_bulboff.gif";
+    } else {
+       image.src = "pic_bulbon.gif";
+   }
+}
+
+document.getElementById("pirmais").innerHTML = "Pirmais piemers";
+document.getElementById("pirmais").style.fontSize = "25px";
+document.getElementById("pirmais").style.color = "red";
+document.getElementById("pirmais").style.backgroundColor = "yellow";
+
+</script>
+
+
+
+<button id="first-button">Click me!</button>
+<script>
+document.getElementById('first-button').addEventListener('click', () => window.open('autors.html'));
+
+</script>
+
+<button type="submit" id="submit">Nosiež mani</button>
+
+<input type="button" id="addButton"  value="Ieeja">
+
+<button onclick="window.location.href = 'autors.html'">Go to autors.html</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

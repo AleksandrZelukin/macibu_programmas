@@ -1,0 +1,10 @@
+﻿<canvas id="manaPamatne" width="200" height="200" style="border:1px solid black; background-color:gainsboro">
+</canvas>
+
+<script>
+var pamatne = document.getElementById("manaPamatne");
+var zimejums = pamatne.getContext("2d");
+var augstums;
+augstums = Number(prompt("Ievadi taisnstūra augstumu"));
+zimejums.strokeRect(10, 10, augstums * 2, augstums);
+</script>

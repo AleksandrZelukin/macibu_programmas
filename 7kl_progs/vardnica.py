@@ -1,0 +1,36 @@
+phonebook = {}
+
+while True:
+    menu = input("""
+    ==================================
+    |Pievienot jaunu ierakstu - 1    |
+    |Rediģet ierakstu - 2            |
+    |Dzest ierakstu - 3              |
+    |Skatit visus ierakstus - 4      |
+    |Iziet - 5                       |
+    |Sūtit uz "talruna saraksts.txt" |
+    ==================================
+    """)
+    if menu == '1':   
+        vards = input("Vārds: ")
+        tlr_num = input("Tālrunis: ")
+        phonebook[vards]=tlr_num
+
+    if menu == '2':
+        for key in phonebook:
+            print(key, phonebook[key])
+
+        vards = input("Vārds: ")
+        tlr_num = input("Tālrunis: ")
+        phonebook[vards]=tlr_num
+
+    if menu == '3':
+        vards = input("Vārds: ")
+        del phonebook[vards]
+
+    if menu == '4':
+        for key in phonebook:
+            print(key, phonebook[key])
+
+    if menu == '5':
+        break

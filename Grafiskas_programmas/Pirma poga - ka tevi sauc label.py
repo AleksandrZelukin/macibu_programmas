@@ -41,7 +41,7 @@ def quit():
 
     
     
-b=a.Entry(master)   
+#b=a.Entry(master)   
 
 btn1 = Button(text="Poga 1",bg="red",fg="blue",padx="20",pady="1",font="16", command=A)
 
