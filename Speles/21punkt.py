@@ -6,7 +6,7 @@ def start():
         count = [0,0,0]
     elif i == 4:
         count = [0,0,0,0]
-    #koloda = [6,7,8,9,10,11] * 4
+    koloda = [6,7,8,9,10,11] * 4
     import random
     random.shuffle(koloda)
     
