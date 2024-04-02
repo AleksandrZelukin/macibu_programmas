@@ -22,6 +22,13 @@
 </style>
 </head>
 <body>
+<input type="radio" size="20" name="jautājums" value="Yes" checked>Jā<br>
+<input type="radio" size="20" name="jautājums" value="No" >Nē<br>
+<input type="radio" size="20" name="jautājums" value="Possible">Iespējams
+<input type="checkbox" name="Datori" value="procesor">procesors<br>
+<input type="checkbox" name="Datori" value="video" >video<br>
+<input type="checkbox" name="Datori" value="printer">printeris<br>
+<input type="checkbox" name="Datori" value="modem" checked> modems
 <h1 class="A">Sveiki!</h1>
 <div id="AA">
 Mana pirma lapa
@@ -29,6 +36,24 @@ Mana pirma lapa
 <div><img src="sova_citaet.jpg"></div>
 <div><img src="puce.jpg"></div>
 
+<form name="mailer" method="post" enctype="text/plain" onSubmit="(document.mailer.action+=mailtoandSubject)">
+    Vārds un Uzvārds:<br>
+    <input type="text" name="name" size="24" onChange="msg(this.form)"><br>
+    Tēma:<br>
+    <input type="text" name="Subjekts" size="24" mChange="msg(this.form)"><br>
+    Paziņojums:<br>
+    <textarea name="Message" cols="40" rows="6" nChange="msg(this.form)"></textarea><br>
+    <input type="submit" value="Nosūtīt" onClick="return checkIt()">
+    <input type="reset" value="Dzēst">
+    </form>
+    <form action="http://www.aaasite.Iv/cgi-bin/aaaprog" enctype="multipart/form-data" method="post">
+        <p>Norādiet savu vārdu</p>
+        <input type="text" name="name_of_senders"><br>
+        <p>Norādiet nosūtāmos failus</p><br>
+        <input type="file" name="name_of_files"><br>
+        <hr>
+        <input type="submit" value="nosūtīt">
+        <input type="reset" value="atcelt"></form>
 </body>   
 
 </html>

@@ -4,10 +4,8 @@ import turtle as tu
 logs=tu.Screen()
 
 def kvadrat():
-    x = tu.textinput("","")
-    y = tu.textinput("","")
+    
     tu.up()
-    tu.goto(x,y)
     tu.down()
     for i in range(4):
         tu.fd(100)
@@ -23,11 +21,11 @@ def dzesana():
 
 btn=tk.Button(text='kvadrats',command=kvadrat)
 btn.place(x=100,y=100)
-btn2=tk.Button(text='trijsturis')
+btn2=tk.Button(text='trijsturis',command=trijsturis)
 btn2.place(x=100,y=150)
 btn3=tk.Button(text='zvaigznite')
 btn3.place(x=100,y=200)
 
-btn_c=tk.Button(text='Dzest')
+btn_c=tk.Button(text='Dzest',command=dzesana)
 btn_c.place(x=100,y=250)
 tu.mainloop()
