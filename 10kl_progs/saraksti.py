@@ -10,3 +10,7 @@ c = 'Hello!'
 d=list(c)
 print(c)
 
+if 6 in a:
+    print(True)
+else: print(False)
+
