@@ -1,9 +1,31 @@
-a = {"Ivars":"123","Olga":"456","Igors":"789"}
+from tkinter import * 
+root = Tk()
+root.title("Ieeja sistēmā")
+root.geometry("300x250")
 
-vards = input("Login: ")
-parole = input("parole: ")
+a = {"Ivars":"123","Olga":"123","Igors":"789"}
 
-if a.get(vards) == parole:
-    print("OK!")
-else:
-    print("Lietotājvārds vai parole nesakrīt!")
+'''
+meginajums = 3
+while meginajums > 0:
+    vards = input("Login: ")
+    parole = input("parole: ")
+    if a.get(vards) != parole:
+        print("Lietotājvārds vai parole nesakrīt!")
+        meginajums -= 1
+        print(f"Jūmas palikā {meginajums} meģinājums")
+    else:
+        print("OK!")
+        break
+        
+'''
+vards = Entry()
+vards.pack()
+parole = Entry()
+parole.pack()
+
+ 
+btn1 = Button(text="Start")
+btn1.pack()
+
+mainloop()
