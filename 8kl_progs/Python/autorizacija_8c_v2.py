@@ -11,9 +11,9 @@ nos.place(relx=.2, rely=.0)
 
 
 def reizinajums():
-    vards = str(vards.get())
-    parole = str(parole.get())
-    if a.get(vards) != parole:
+    v = vards.get()
+    p = parole.get()
+    if a.get(v) != p:
         res.configure(text="Lietotājvārds vai parole nesakrīt!")
     else:
         res.configure("OK!")
