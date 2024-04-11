@@ -15,3 +15,5 @@ def draw_star(size, color):
     return
 
 draw_star(100, "yellow")
+
+

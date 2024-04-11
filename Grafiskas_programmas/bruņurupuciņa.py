@@ -15,3 +15,4 @@ def draw_star(size, color):
     return
 
 draw_star(50, "yellow")
+turtle.mainloop()
