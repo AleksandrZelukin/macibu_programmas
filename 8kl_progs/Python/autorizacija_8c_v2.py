@@ -8,6 +8,15 @@ res.place(relx=.2, rely=.4)
 nos = tk.Label(win, text = "Ievadiet Vārds u parole")
 nos.place(relx=.2, rely=.0)
 
+
+def reizinajums():
+    vards = str(vards.get())
+    parole = str(parole.get())
+    if a.get(vards) != parole:
+        res.configure(text="Lietotājvārds vai parole nesakrīt!")
+    else:
+        res.configure("OK!")
+        
 vards = tk.Entry(win)
 vards.place(relx=.2, rely=.1)
 parole = tk.Entry(win)
