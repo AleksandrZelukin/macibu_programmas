@@ -12,7 +12,7 @@ def start():
 n = int('0')
 while n<i:
     print ('Speletajs nr. %d' %n)
-    while True:
+    while True:
         choice = input('Start? y/n\n')
         if choice == 'y':
             jūtos_drosmīgs = True
