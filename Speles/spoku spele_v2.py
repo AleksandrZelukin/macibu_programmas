@@ -1,21 +1,22 @@
 # Spoku spele
 from random import randint
 print ('Spoku spēle')
-jūtos_drosmīgs = True
+jūtos_drosmīgs = 3
 rezultāts = 0
-while jūtos_drosmīgs:
+while jūtos_drosmīgs > 0:
     spoka_durvis = randint (1,3)
     print ('Tev priekšā ir trīs durvis...')
     print ('Āiz vienām ir spoks.')
-    durvis = input('1,2 vai 3?') #durvju_num = int(input('1,2 vai 3?'))
-    durvju_num = int(durvis)
+    durvju_num = int(input('1,2 vai 3?'))
+    
     if durvju_num == spoka_durvis:
         print('SPOKS!')
-        jūtos_drosmīgs = False
+        jūtos_drosmīgs -= 1
+        print(f"Tev palikā {jūtos_drosmīgs} dzīves")
     else:
         print('Spoka nav!')
         print('Tu vari ienākt nākamajā istabā.')
-        rezultāts = rezultāts + 1 # rezultāts += 1
+        rezultāts += 1
+
 print('Bēdz prom!')
-print('Spēle beigusies. Tu ieguvi', rezultāts, 'punktus.')
-#print(f'Spēle beigusies. Tu ieguvi {rezultāts} punktus.')
+print(f'Spēle beigusies. Tu ieguvi {rezultāts} punktus.')
