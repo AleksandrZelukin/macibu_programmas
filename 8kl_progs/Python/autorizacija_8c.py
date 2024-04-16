@@ -7,7 +7,7 @@ while meginajums > 0:
     if a.get(vards) != parole:
         print("Lietotājvārds vai parole nesakrīt!")
         meginajums -= 1
-        print(f"Jūmas palikā {meginajums} meģinājums")
+        print(f"Jūms palikā {meginajums} meģinājums")
     else:
         print("OK!")
         break

@@ -8,7 +8,6 @@ res.place(relx=.2, rely=.4)
 nos = tk.Label(win, text = "Ievadiet Vārds u parole")
 nos.place(relx=.2, rely=.0)
 
-
 def reizinajums():
     v = str(vards.get())
     p = str(parole.get())
@@ -30,14 +29,8 @@ def reizinajums():
     else:
         res.configure(text="OK!")
         
-
-   
-button1 = tk.Button(win, text = "Ieeja",
-                    background="#FF00AA",
-                    foreground="#0000AA",
-                    activebackground="#00FF00",
-                    command=reizinajums)
+button1 = tk.Button(win, text = "Pārbaude",background="#FF00AA",foreground="#0000AA",activebackground="#00FF00",command=reizinajums)
 button1.place (relx=.2, rely=.3)
-
-
+button2 = tk.Button(win, text = "Ieeja",background="#FF00AA",foreground="#0000AA",activebackground="#00FF00")
+button2.place (relx=.2, rely=.5)
 win.mainloop()
