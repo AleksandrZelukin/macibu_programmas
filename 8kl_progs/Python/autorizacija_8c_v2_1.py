@@ -20,7 +20,19 @@ def parbaude():
         res.configure(text="Lietotājvārds vai parole nesakrīt!")
     else:
         res.configure(text="OK!")
+
+        
+def exit():
+    win.quit()
+def smile():
+    import smile
+        
 btn1 = tk.Button(text="Pārbaudit",command=parbaude)
 btn1.place(relx=.2, rely=.3)
+btn2 = tk.Button(text="Beigt",command=exit)
+btn2.place(relx=.5, rely=.3)
+btn3 = tk.Button(text="Atvērt programmu",command=smile)
+
+btn3.place(relx=.4, rely=.4)
 
 win.mainloop()
