@@ -1,13 +1,33 @@
+from tkinter import Tk,Label,Entry,Button
+logs = Tk()
+logs.title("Ieeja sistēma")
+logs.geometry("300x400")
 a = {"Anna":"123","Ivars":"456","Anna":"792"}
+nos = Label(text="Ievadi lietotājavards un parole")
+nos.pack()
+vards = Entry()
+vards.pack()
+parole = Entry(show="*")
+parole.pack()
 
-meginajums = 3
-while meginajums >0:
-    atslega = input("login: ")
-    vertiba = input("parole: ")
-    if a.get(atslega) != vertiba:
-        print("Lietotājvārds vai parole nesakrīt!")
-        meginajums -= 1
-        print(f"Tev palikā {meginajums} meģinājums")
+
+def parbaude():
+    v = vards.get()
+    p = parole.get()
+    if a.get(v) != p:
+        rezultats.configure(text="Lietotājvards vai parole nesakrīt!")
     else:
-        print("OK!")
+        rezultats.configure(text="OK!")
 
+def close():
+   logs.quit()        
+    
+btn = Button(text="Pārbaudit",command=parbaude)
+btn.pack()
+rezultats = Label(text="")
+rezultats.pack()
+
+btn1 = Button(text="Beigt",command=close)
+btn1.pack()
+
+logs.mainloop()
