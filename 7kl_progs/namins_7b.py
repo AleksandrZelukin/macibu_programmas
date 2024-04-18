@@ -1,6 +1,6 @@
 import turtle as t
 t.shape("turtle")
-
+'''
 t.up()
 t.goto(-100,-150)
 t.down()
@@ -29,5 +29,16 @@ for i in range (10):
 t.goto(-200,100)
 t.circle(50)
 t.end_fill()
+'''
+t.up()
+t.goto(-50,-250)
+t.down()
+
+for i in range(4):
+    t.fd(100)
+    t.rt(90)
+t.fd(100)
+t.lt(90)
+t.circle(50,180)
 
 t.mainloop()
