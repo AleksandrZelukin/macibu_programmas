@@ -1,11 +1,13 @@
-#Definējiet funkciju "aprēķināt_vidējo", kas saņem trīs skaitļus kā argumentus (atsevišķi) un atgriež to vidējo vērtību.
+#Definējiet funkciju "aprēķināt_vidējo", kas saņem trīs skaitļus 
+# kā argumentus (atsevišķi) un atgriež to vidējo vērtību.
 
 def aprēķināt_vidējo(sk1, sk2,sk3):
     return sk1+sk2+sk3/3
 
 print(aprēķināt_vidējo(3,5,8))
 
-#Definējiet funkciju "izvadit_virkni", kas saņem vienu argumentu - virkni, un izvada šo virkni atpakaļ uz ekrānu.
+#Definējiet funkciju "izvadit_virkni", kas saņem vienu argumentu - 
+# virkni, un izvada šo virkni atpakaļ uz ekrānu.
 
 def izvadit_virkni(virkni):
     return virkni
@@ -31,7 +33,8 @@ if (gads % 4 == 0 and gads % 100 != 0) or (gads % 400 == 0):
 else:
     print("Gads ir parasts gads.")
 
-#Uzrakstiet programmu, kas prasa lietotājam ievadīt vārdu un pēc tam izvada šo vārdu atpakaļ apgrieztā formā.
+#Uzrakstiet programmu, kas prasa lietotājam ievadīt vārdu 
+# un pēc tam izvada šo vārdu atpakaļ apgrieztā formā.
 
 vards = input("Ievadiet vārdu: ")
 apgriezts_vards = vards[::-1]
@@ -61,7 +64,8 @@ print(parbaudīt_pāra_skaitli(6))
 #Uzrakstiet programmu, kas izvada pirmos 10 veselos skaitļus sākot ar 1 un beidzot ar 10.
 for skaitlis in range(1, 11):
     print(skaitlis, end=", ")
-#Uzrakstiet funkciju "aprēķināt_kvadrātu", kas saņem vienu skaitli kā argumentu un atgriež šī skaitļa kvadrātu.
+#Uzrakstiet funkciju "aprēķināt_kvadrātu", kas saņem vienu skaitli 
+# kā argumentu un atgriež šī skaitļa kvadrātu.
 
 def aprēķināt_kvadrātu(skaitlis):
     return skaitlis ** 2
