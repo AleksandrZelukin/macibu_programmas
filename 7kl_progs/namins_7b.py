@@ -42,6 +42,7 @@ t.down()
 t.color("sandy brown") #https://trinket.io/docs/colors
 t.fillcolor("sandy brown")
 t.begin_fill()
+
 for i in range(4):
     t.fd(100)
     t.rt(90)
@@ -54,7 +55,7 @@ t.goto(-100,-150)
 t.down()
 t.pencolor("blue")
 t.write("Suņa buda",font=("Arial",32, "bold"))
-
+'''
 t.up()
 t.goto(-200,150)
 t.down()
@@ -69,4 +70,5 @@ for i in range (10):
 t.goto(-250,150)
 t.circle(50)
 t.end_fill()
+'''
 t.mainloop()
