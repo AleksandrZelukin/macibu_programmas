@@ -13,28 +13,33 @@ personas_kods = Entry(font="32")
 personas_kods.pack()
 label = Label(font="32")
 label.pack()
-
+label_y = Label(font="32")
+label_y.pack()
+label_m = Label(font="32")
+label_m.pack()
+label_d = Label(font="32")
+label_d.pack()
 def display():
-    label["text"] = personas_kods.get()
-
-def clear():
-    vards.delete(0, END)
-    label["text"] = vards.get()
-
-def pk_parbaude():
-    pk = input("PK: ")
+    label["text"] = (vards.get() + " " + personas_kods.get())
+    pk = personas_kods.get()
     pk1 = list(pk)
     if pk[7]=="1":
         pk1.insert(4,"19")
     elif pk[7]=="2":
         pk1.insert(4,"20")
-    
     try:
         dd = (''.join(pk1[0:7]))
         dz=datetime.strptime(dd,"%d%m%Y")
-        print(dz)
+        label_y.configure(text = dz.year)
+        label_m.configure(text= dz.month)
+        label_d.configure(text= dz.day)
     except:
-        print("Nepareizi dzimšanas dati.")    
+        label_y.configure(text="Nepareizi dzimšanas dati.")
+def clear():
+    vards.delete(0, END)
+    personas_kods.delete(0, END)
+    label["text"] = vards.get()
+ 
      
 btn1 = Button(a, text="ievads", command=display)
 btn2 = Button(a, text="notirit", command=clear)
