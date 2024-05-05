@@ -3,8 +3,9 @@ fillcolor('yellow')
 pencolor('yellow')
 screensize(bg='blue')
 speed(100)
-figura=textinput('Figura?', 'Kada figura?')
-if figura == 'zvaigzne':
+#figura=textinput('Figura?', 'Kada figura? 1-zvaigzne, 2- kvadrats')
+figura=numinput('Figura?', 'Kada figura? 1-zvaigzne, 2- kvadrats')
+if figura == 1:
     up()
     goto(0,0)
     down()
@@ -16,7 +17,7 @@ if figura == 'zvaigzne':
     end_fill()
     pencolor('red')
     write('zvaigzne',font=('Helvetica',24,'italic'))
-if figura == 'kvadrats':
+if figura == 2:
     up()
     goto(0,0)
     down()
