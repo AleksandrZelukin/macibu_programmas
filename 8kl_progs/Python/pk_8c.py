@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import *
 pk = input("Ievadi personas kods: ")
 if len(pk) == 12:
     pk1 = list(pk)
