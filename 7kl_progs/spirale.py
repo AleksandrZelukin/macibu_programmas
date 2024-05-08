@@ -9,7 +9,7 @@ import math
 turtle.tracer(1000, 0) # Make the turtle draw faster.
 
 SPACING = 3
-DOT_SIZE = 6
+DOT_SIZE = 8
 
 turtle.bgcolor('#353337') # Use a dark background color.
 turtle.pencolor('#CCCCCC') # The spiral is a light gray color.
