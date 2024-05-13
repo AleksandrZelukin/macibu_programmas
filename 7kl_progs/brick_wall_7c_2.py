@@ -1,8 +1,8 @@
 import simple_draw as sd
 shift = 50
 for y in range(0, 600, 50):
-    length_x = 100
-    length_y = 50
+    length_x = 95
+    length_y = 45
     shift = 50 - shift
     for x in range(0 - shift, 600, 100):
         left_bottom = sd.get_point(x, y)
