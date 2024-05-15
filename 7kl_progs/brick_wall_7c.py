@@ -9,6 +9,7 @@ for m in range(24):
     else:
         x = -425
         z = 15
+        
     for k in range(z):
         up()
         setposition(x,y)
