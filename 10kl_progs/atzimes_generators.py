@@ -8,14 +8,14 @@ uzv = Entry( font=("Arial", 16))
 uzv.pack()
 
 def atzime():
-    atzime1 = randint(4,10)
-    atzime2 = randint(4,10)
-    atzime3 = randint(4,10)
+    atzime1 = randint(0,10)
+    atzime2 = randint(0,10)
+    atzime3 = randint(0,10)
     atzime = str(round(((atzime1 + atzime2 + atzime3)/3),0))
     vards = uzv.get()
     rez = vards +" "+ atzime
     atz.configure(text ="Vidēja atzīme ir: " + atzime)
-    
+    print(rez, file=f)
     
 poga1 = Button(text="Ģenerēt atzimi un sūtit registrā",command=atzime)
 poga1.pack()
