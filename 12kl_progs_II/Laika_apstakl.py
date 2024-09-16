@@ -1,3 +1,5 @@
+#https://thecode.media/9-portfolio/
+
 # подключаем библиотеку для работы с запросами
 import requests
 # указываем город
