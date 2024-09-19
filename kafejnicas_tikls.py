@@ -1,0 +1,71 @@
+import sqlite3
+
+db = sqlite3.connect('kafejnicas_tikls.db')
+
+# Create Cursor
+c = db.cursor()
+
+# Tabulu izveidošana
+c.execute("""CREATE TABLE if not exists "darbinieks" (
+	"ID_darbinieks"	INTEGER,
+	"vards"	TEXT,
+	"uzvards"	TEXT,
+	"talrunis"	TEXT,
+	"amats"	TEXT,
+	"kafejnica"	INTEGER,
+	"atvalinajums"	TEXT,
+	PRIMARY KEY("ID_darbinieks" AUTOINCREMENT))
+""")
+
+c.execute("""CREATE TABLE if not exists kafejnicas (
+	"ID_kafejnica"	INTEGER,
+	"nosaukums"	TEXT,
+	"adresi"	TEXT,
+	PRIMARY KEY("ID_kafejnica" AUTOINCREMENT))
+""")
+
+
+c.execute("""CREATE TABLE if not exists pasutijums (
+	"ID_pasutijums"	INTEGER,
+	"datums"	TEXT,
+	"apraksts"	TEXT,
+    "darbinieks" INTEGER,
+	PRIMARY KEY("ID_pasutijums" AUTOINCREMENT))
+""")
+
+
+
+# tabulas aizpildišana
+c.execute("INSERT INTO darbinieks VALUES ('2', 'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
+
+c.execute("INSERT INTO kafejnicas VALUES ('2', 'Argo', 'Avotu 12')")
+
+c.execute("INSERT INTO pasutijums VALUES ('2', '09.11.2023', 'Cepumi', 1)")
+
+
+db.commit()
+db.close()
+
+'''
+# Удаление данных
+c.execute("DELETE FROM articles WHERE avtor = 'Admin'")
+
+# Изменение данных
+c.execute("UPDATE articles SET avtor = 'Admin', views = 1 WHERE title = 'Amazon is cool!'")
+
+# Выборка данных
+c.execute("SELECT rowid, * FROM articles WHERE rowid < 5 ORDER BY views")
+items = c.fetchall()
+print(items)
+print(c.fetchmany(1))
+# print(c.fetchone()[1])
+
+for el in items:
+    print(el[1] + "\n" + el[4])
+
+db.commit()
+
+db.close()
+
+'''        
+
