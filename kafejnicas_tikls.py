@@ -7,7 +7,7 @@ db.execute("PRAGMA foreign_keys = 1")
 c = db.cursor()
 
 # Tabulu izveidošana
-c.execute("""CREATE TABLE if not exists "darbinieks" (
+c.execute("""CREATE TABLE if not exists darbinieks (
 	"ID_darbinieks"	INTEGER PRIMARY KEY AUTOINCREMENT,
 	"vards"	TEXT,
 	"uzvards"	TEXT,
@@ -32,8 +32,10 @@ c.execute("""CREATE TABLE if not exists kafejnicas (
 	FOREIGN KEY ("ID_kafejnica") REFERENCES darbinieks ("kafejnica")
 )""")
 
+db.commit()
+db.close()
 
-
+'''
 # tabulas aizpildišana
 c.execute("INSERT INTO darbinieks VALUES ('3', 'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
 
@@ -42,10 +44,6 @@ c.execute("INSERT INTO kafejnicas VALUES ('3', 'Allegro', 'Kaleju 12')")
 c.execute("INSERT INTO pasutijums VALUES ('2', '09.11.2023', 'Cepumi', 1)")
 
 
-db.commit()
-db.close()
-
-'''
 # Удаление данных
 c.execute("DELETE FROM articles WHERE avtor = 'Admin'")
 
