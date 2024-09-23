@@ -2,7 +2,7 @@
 import sqlite3
 
 db = sqlite3.connect('kafejnicas_tikls.db')
-
+db.execute("PRAGMA foreign_keys = 1")
 # Create Cursor
 c = db.cursor()
 
