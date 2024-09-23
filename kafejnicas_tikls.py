@@ -23,6 +23,8 @@ c.execute("""CREATE TABLE if not exists kafejnicas (
 	"nosaukums"	TEXT,
 	"adresi"	TEXT,
 	PRIMARY KEY("ID_kafejnica" AUTOINCREMENT))
+	FOREIGN KEY (ID_kafejnica)
+	REFERENCES darbinieks (kafejnica)
 """)
 
 
