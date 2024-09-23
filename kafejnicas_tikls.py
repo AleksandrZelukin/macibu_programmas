@@ -8,40 +8,36 @@ c = db.cursor()
 
 # Tabulu izveidošana
 c.execute("""CREATE TABLE if not exists "darbinieks" (
-	"ID_darbinieks"	INTEGER,
+	"ID_darbinieks"	INTEGER PRIMARY KEY AUTOINCREMENT,
 	"vards"	TEXT,
 	"uzvards"	TEXT,
 	"talrunis"	TEXT,
 	"amats"	TEXT,
 	"kafejnica"	INTEGER,
-	"atvalinajums"	TEXT,
-	PRIMARY KEY("ID_darbinieks" AUTOINCREMENT))
-""")
-
-c.execute("""CREATE TABLE if not exists kafejnicas (
-	"ID_kafejnica"	INTEGER,
-	"nosaukums"	TEXT,
-	"adresi"	TEXT,
-	PRIMARY KEY("ID_kafejnica" AUTOINCREMENT))
-	FOREIGN KEY (ID_kafejnica)
-	REFERENCES darbinieks (kafejnica)
+	"atvalinajums"	TEXT)
 """)
 
 
 c.execute("""CREATE TABLE if not exists pasutijums (
-	"ID_pasutijums"	INTEGER,
+	"ID_pasutijums"	INTEGER PRIMARY KEY AUTOINCREMENT,
 	"datums"	TEXT,
 	"apraksts"	TEXT,
-    "darbinieks" INTEGER,
-	PRIMARY KEY("ID_pasutijums" AUTOINCREMENT))
+    "darbinieks" INTEGER)
 """)
+
+c.execute("""CREATE TABLE if not exists kafejnicas (
+	"ID_kafejnica"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"nosaukums"	TEXT,
+	"adresi"	TEXT,
+	FOREIGN KEY ("ID_kafejnica") REFERENCES darbinieks ("kafejnica")
+)""")
 
 
 
 # tabulas aizpildišana
-c.execute("INSERT INTO darbinieks VALUES ('2', 'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
+c.execute("INSERT INTO darbinieks VALUES ('3', 'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
 
-c.execute("INSERT INTO kafejnicas VALUES ('2', 'Argo', 'Avotu 12')")
+c.execute("INSERT INTO kafejnicas VALUES ('3', 'Allegro', 'Kaleju 12')")
 
 c.execute("INSERT INTO pasutijums VALUES ('2', '09.11.2023', 'Cepumi', 1)")
 
