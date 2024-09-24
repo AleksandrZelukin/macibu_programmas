@@ -6,42 +6,46 @@ db.execute("PRAGMA foreign_keys = 1")
 # Create Cursor
 c = db.cursor()
 
+c.execute("""CREATE TABLE if not exists kafejnicas (
+    "ID_kafejnica" INTEGER  NOT NULL PRIMARY KEY,
+    "nosaukums" TEXT, 
+    "adresi" TEXT,
+    "darbinieks" INTEGER
+    )""")
+
 # Tabulu izveidošana
 c.execute("""CREATE TABLE if not exists darbinieks (
-	"ID_darbinieks"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"ID_darbinieks"	INTEGER  NOT NULL PRIMARY KEY,
 	"vards"	TEXT,
 	"uzvards"	TEXT,
 	"talrunis"	TEXT,
 	"amats"	TEXT,
-	"kafejnica"	INTEGER,
-	"atvalinajums"	TEXT)
-""")
+	"atvalinajums"	TEXT,
+    "pasutijums" INTEGER,
+	FOREIGH KEY "id_darbinieks" REFERENCES kafeinicas("darbinieks")
+    )""")
 
 
 c.execute("""CREATE TABLE if not exists pasutijums (
-	"ID_pasutijums"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"ID_pasutijums"	INTEGER  NOT NULL PRIMARY KEY,
 	"datums"	TEXT,
 	"apraksts"	TEXT,
-    "darbinieks" INTEGER)
-""")
+    "darbinieks" INTEGER,
+    FOREIGH KEY "ID_pasutijums" REFERENCES darbinieks ("pasutijums")
+    )""")
 
-c.execute("""CREATE TABLE if not exists kafejnicas (
-	"ID_kafejnica"	INTEGER PRIMARY KEY AUTOINCREMENT,
-	"nosaukums"	TEXT,
-	"adresi"	TEXT,
-	FOREIGN KEY ("ID_kafejnica") REFERENCES darbinieks ("kafejnica")
-)""")
+
 
 #db.commit()
 #db.close()
 
 
 # tabulas aizpildišana
-c.execute("INSERT INTO darbinieks VALUES ('3', 'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
+c.execute("INSERT INTO darbinieks VALUES (1,'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
 
-c.execute("INSERT INTO kafejnicas VALUES ('3', 'Allegro', 'Kaleju 12')")
+c.execute("INSERT INTO kafejnicas VALUES (1,'Allegro', 'Kaleju 12')")
 
-c.execute("INSERT INTO pasutijums VALUES ('2', '09.11.2023', 'Cepumi', 1)")
+c.execute("INSERT INTO pasutijums VALUES (1,'09.11.2023', 'Cepumi', 1)")
 
 
 # Удаление данных
