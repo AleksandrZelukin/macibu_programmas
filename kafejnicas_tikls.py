@@ -32,10 +32,10 @@ c.execute("""CREATE TABLE if not exists kafejnicas (
 	FOREIGN KEY ("ID_kafejnica") REFERENCES darbinieks ("kafejnica")
 )""")
 
-db.commit()
-db.close()
+#db.commit()
+#db.close()
 
-'''
+
 # tabulas aizpildišana
 c.execute("INSERT INTO darbinieks VALUES ('3', 'Valdis', 'Ozols', '+371 24564567','Pavars',1,'atvalinajuma')")
 
@@ -51,7 +51,7 @@ c.execute("DELETE FROM articles WHERE avtor = 'Admin'")
 c.execute("UPDATE articles SET avtor = 'Admin', views = 1 WHERE title = 'Amazon is cool!'")
 
 # Выборка данных
-c.execute("SELECT rowid, * FROM articles WHERE rowid < 5 ORDER BY views")
+c.execute("SELECT rowid, * FROM darbinieks WHERE rowid < 5 ORDER BY views")
 items = c.fetchall()
 print(items)
 print(c.fetchmany(1))
@@ -63,6 +63,4 @@ for el in items:
 db.commit()
 
 db.close()
-
-'''        
 
