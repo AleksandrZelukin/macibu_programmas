@@ -17,12 +17,13 @@ cur.execute("""CREATE TABLE if not exists band (
 cur.execute("""CREATE TABLE if not exists album (
 	album_id INTEGER  NOT NULL PRIMARY KEY,
 	name TEXT,
-	band_id INTEGER,
 	year INTEGER,
+    band_id INTEGER,
 	FOREIGH KEY band_id REFERENCES band(band_id)
     )""")
 
-
+cur.execute("INSERT INTO band VALUES (5,'Deep Purple', 1972, 'UK')")
+cur.execute("INSERT INTO album VALUES (6, 'Mashine Head', 5, 1976,5)")
 
 cur.execute("INSERT INTO band VALUES (1,'The Beatles', 1957, 'UK')")
 cur.execute("INSERT INTO band VALUES (2,'Metallica', 1981, 'USA')")
