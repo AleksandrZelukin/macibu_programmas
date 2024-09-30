@@ -1,39 +1,29 @@
-# https://docs.python.org/3/library/sqlite3.html
-# https://youtu.be/cZTxadhqahQ?si=X3YriXeR90gtDDl7
 import sqlite3
 
-conn = sqlite3.connect('albums.db')
-conn.execute("PRAGMA foreign_keys = 1")
-# Create Cursor
+conn = sqlite3.connect("albums.db")
 cur = conn.cursor()
 
 cur.execute("""CREATE TABLE if not exists band (
-    band_id INTEGER  NOT NULL PRIMARY KEY,
-    name TEXT, 
-    year INTEGER,
-    comment TEXT
-    )""")
+            band_id INTEGER NOT NULL PRIMARY KEY,
+            nosaukums TEXT)""")
 
-cur.execute("""CREATE TABLE if not exists album (
-	album_id INTEGER  NOT NULL PRIMARY KEY,
-	name TEXT,
-	year INTEGER,
-    band_id INTEGER,
-	FOREIGH KEY band_id REFERENCES band(band_id)
-    )""")
+cur.execute("""CREATE TABLE if not exists albums (
+            albums_id INTEGER,
+            nosaukums TEXT,
+            band_id)""")
+band_id = int(input("band ID: "))
+nosaukums = input("Nosaukums: ")
+band = [band_id, nosaukums]
+cur.execute("INSERT INTO band VALUES(?,?)",band)
 
-cur.execute("INSERT INTO band VALUES (5,'Deep Purple', 1972, 'UK')")
-cur.execute("INSERT INTO band VALUES (1,'The Beatles', 1957, 'UK')")
-cur.execute("INSERT INTO band VALUES (2,'Metallica', 1981, 'USA')")
-cur.execute("INSERT INTO band VALUES (3,'Queen', 1970, 'UK')")
-cur.execute("INSERT INTO band VALUES (4,'Pink Floyd',1964,'UK')")
+#cur.execute("INSERT INTO band VALUES(1,'The Beatles')")
+#cur.execute("INSERT INTO band VALUES(2,'Pink Floyd')")
+#cur.execute("INSERT INTO band VALUES(3,'Deep Purple')")
 
-cur.execute("INSERT INTO album VALUES (1,'Master of Puppets', 2, 1986,2)")
-cur.execute("INSERT INTO album VALUES (2,'The Black Album', 2, 1991,2)")
-cur.execute("INSERT INTO album VALUES (3,'Ride the Lightning', 2, 1984,2)")
-cur.execute("INSERT INTO album VALUES (4, 'A Night at the Opera', 3, 1975,3 )")
-cur.execute("INSERT INTO album VALUES (5, 'News of the World', 3, 1976,3 )")
-cur.execute("INSERT INTO album VALUES (6, 'The Dark Side of the Moon', 4, 1976,4 )")
-cur.execute("INSERT INTO album VALUES (7, 'Mashine Head', 5, 1976,5)")
+#cur.execute("INSERT INTO albums VALUES(1,'Sgt. Peppers Lonely Hearts Club Band',1)")
+#cur.execute("INSERT INTO albums VALUES(2,'Yellow Submarine',1)")
+#cur.execute("INSERT INTO albums VALUES(3,'Revolver',1)")
+#cur.execute("INSERT INTO albums VALUES(4,'The Wall',2)")
+
 conn.commit()
 cur.close()
