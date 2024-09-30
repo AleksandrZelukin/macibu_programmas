@@ -2,7 +2,7 @@
 # https://youtu.be/cZTxadhqahQ?si=X3YriXeR90gtDDl7
 import sqlite3
 
-conn = sqlite3.connect('albums.db')
+conn = sqlite3.connect('albums1.db')
 conn.execute("PRAGMA foreign_keys = 1")
 # Create Cursor
 cur = conn.cursor()
