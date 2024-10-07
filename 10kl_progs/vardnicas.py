@@ -31,3 +31,15 @@ while True:
         print(d)
         break
     '''
+
+vardnica = {}
+while True:
+    pilseta = input("Pilsēta: ")
+    if pilseta == "none":
+            break
+    valsts = input("Valsts: ")
+    vardnica[pilseta]=valsts
+    if valsts == "none":
+            break
+    for key, value in vardnica.items():
+        print (key,value)
