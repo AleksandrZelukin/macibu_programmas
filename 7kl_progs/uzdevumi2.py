@@ -1,10 +1,21 @@
 '''
 Kārlis noperka M kg ābolu maksājot C centus par kg. 
 Cik centus X ir jāsamaksa par pirkumu? 
-Cik atlikuma centus S viņš dabūs no L eiro? (4.punkti)
+Cik atlikuma centus S viņš dabūs no L eiro?
+
+L = int(input("Man kabatā ir: "))
+C = float(input("Aboli maksa: "))
+M = int(input("Grību pirkt(kg.): "))
+
+S = L - (M*C)
+
+print("Atlikums bus: ",S)
+
+Annai ir a gadi, bet Marutai - m gadi. Kura no viņam ir vecāka?
 
 
-Annai ir a gadi, bet Marutai - m gadi. Kas no viņam ir vecāka?
+
+
 
 
 Programma pieprasa kvadrāta mālu a un izskaitļo perimetru
