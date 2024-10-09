@@ -10,7 +10,7 @@ print(a)
 del a[2]
 
 print(a)
-'''
+
 d={}
 print("Nospiediet stop, lai izietu!")
 while True:
@@ -25,13 +25,13 @@ while True:
         b= input("Value: ")
     d[a]=b
     print(d)
-    '''
+
     if a =="stop":
         del d["stop"]
         print(d)
         break
     '''
-
+saraksts = open("vardnica.txt","w" )
 vardnica = {}
 while True:
     pilseta = input("Pilsēta: ")
@@ -41,5 +41,8 @@ while True:
     vardnica[pilseta]=valsts
     if valsts == "none":
             break
-    for key, value in vardnica.items():
-        print (key,value)
+print("Vārdnicas saturs")
+for key, value in vardnica.items():
+    print (key,value)
+print(vardnica, file=saraksts)
+saraksts.close()
