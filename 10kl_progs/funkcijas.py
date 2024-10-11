@@ -1,7 +1,7 @@
-def tainssturas_laukums(a,h):
-    s = a*h
-    print("taisnsstura laukums: ",s)
+def trijsturas_laukums(a,h):
+    s = (a*h)/2
+    print("trijstura laukums: ",s)
 
-x = int(input())
-y = int(input())
-a = tainssturas_laukums(x,y)
+x = int(input("Pamats: "))
+y = int(input("Augstums: "))
+a = trijsturas_laukums(x,y)

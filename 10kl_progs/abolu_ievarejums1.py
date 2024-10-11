@@ -11,7 +11,7 @@ def ievarijums(aboli_svars, cukurs_uz_kg):
     izmaksa_kg = cukura_cena * cukurs_uz_kg
     return izmaksa_kg * aboli_svars
 
-aboli = 1.5
-cukurs = 0.7
+aboli = 1.7
+cukurs = 0.9
 print("Uz {} kg ābolu izmaksas būs {} EUR".format(aboli, ievarijums(aboli, cukurs)))
 print("Uz",aboli,"kg ābolu izmaksas būs ",ievarijums(aboli, cukurs))
