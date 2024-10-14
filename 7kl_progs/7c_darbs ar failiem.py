@@ -2,13 +2,13 @@ phonebook = {}
 
 while True:
     menu = input("""
-    =========================
+    ==================================
     # Pievienot jaunu ierakstu - 1   #          
-    # Rediģet ierakstu - 2               #
-    # Dzest ierakstu - 3                   #  
-    # Skatit visus ierakstus - 4        #     
-    # Saglabat un Iziet - 5              #           
-    =========================
+    # Rediģet ierakstu - 2           #
+    # Dzest ierakstu - 3             #  
+    # Skatit visus ierakstus - 4     #     
+    # Saglabat un Iziet - 5          #           
+    ==================================
     """)
     if menu == '1':   
         vards = input("Vārds: ")
