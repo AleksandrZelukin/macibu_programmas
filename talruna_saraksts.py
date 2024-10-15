@@ -16,7 +16,7 @@ while True:
         f = open("talruna_saraksts.txt",'a')  
         # json.dump(phonebook,f)
         # print(phonebook,file=f)
-        print(saraksts)
+        print(saraksts, file=f)
         f.close() 
 
     if menu == '2':
@@ -27,3 +27,4 @@ while True:
 
     if menu == '3':
         break
+

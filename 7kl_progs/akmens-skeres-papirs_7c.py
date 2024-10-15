@@ -4,6 +4,7 @@ dators = random.choice(saraksts)
 lives = 3
 datorwin = 0
 youwin = 0
+print("Spēle turpinās līdz 3 uzvarām")
 while lives > 0:
     speletajs = input("Jūsu izvēlē\n(akmens,šķēres,papīrs): ")
 
