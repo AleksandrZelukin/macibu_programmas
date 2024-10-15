@@ -20,12 +20,14 @@ while True:
                
     if jautajums == "stop":
         break
-        
+       
 for key, value in phonebook.items():
     print (key,value)
 print(phonebook, file=saraksts)
 
+
 saraksts.close()
+
 
 saraksts = open("phonebook-2024.txt","r" )
 phonebook = saraksts.readline()
