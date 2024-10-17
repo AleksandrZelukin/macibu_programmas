@@ -1,4 +1,5 @@
 import sqlite3
+from albums3_1_saraksts import grupas
 
 conn = sqlite3.connect("albums3_1.db")
 
@@ -9,7 +10,7 @@ cur.execute("DROP TABLE IF EXISTS albums")
 conn.execute("PRAGMA foreign_keys = 1")
 
 cur.execute("""CREATE TABLE if not exists band (
-            band_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            band_id INTEGER PRIMARY KEY,
             band_nosaukums TEXT)""")
 
 cur.execute("""CREATE TABLE if not exists albums (
@@ -18,6 +19,10 @@ cur.execute("""CREATE TABLE if not exists albums (
             band_id INTEGER,
             FOREIGN KEY (band_id) REFERENCES band(band_id))""")
 
+cur.executemany("INSERT INTO band VALUES (?,?)",(grupas))
+
+conn.commit()
+'''
 cur.execute("INSERT INTO band (band_nosaukums) VALUES('The Beatles')")
 cur.execute("INSERT INTO band (band_nosaukums) VALUES('Pink Floyd')")
 cur.execute("INSERT INTO band (band_nosaukums) VALUES('Deep Purple')")
@@ -52,3 +57,4 @@ for visi_kopa in kopa:
 
 conn.commit()
 cur.close()
+'''
