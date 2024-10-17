@@ -10,7 +10,7 @@ cur.execute("DROP TABLE IF EXISTS albums")
 conn.execute("PRAGMA foreign_keys = 1")
 
 cur.execute("""CREATE TABLE if not exists band (
-            band_id INTEGER PRIMARY KEY,
+            band_id INTEGER PRIMARY KEY AUTOINCREMENT,
             band_nosaukums TEXT)""")
 
 cur.execute("""CREATE TABLE if not exists albums (
@@ -19,21 +19,21 @@ cur.execute("""CREATE TABLE if not exists albums (
             band_id INTEGER,
             FOREIGN KEY (band_id) REFERENCES band(band_id))""")
 
-# cur.executemany("INSERT INTO band VALUES (?,?)",(grupas))
+cur.executemany("INSERT INTO band VALUES (?,?)",(grupas))
 
-# conn.commit()
+conn.commit()
 
-cur.execute("INSERT INTO band (band_nosaukums) VALUES('The Beatles')")
-cur.execute("INSERT INTO band (band_nosaukums) VALUES('Pink Floyd')")
-cur.execute("INSERT INTO band (band_nosaukums) VALUES('Deep Purple')")
+# cur.execute("INSERT INTO band (band_nosaukums) VALUES('The Beatles')")
+# cur.execute("INSERT INTO band (band_nosaukums) VALUES('Pink Floyd')")
+# cur.execute("INSERT INTO band (band_nosaukums) VALUES('Deep Purple')")
 
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Sgt. Peppers Lonely Hearts Club Band',1)")
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Yellow Submarine',1)")
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Revolver',1)")
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('The Wall',2)")
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Machine Head',3)")
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Perfect Strangers',3)")
-cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Wish You Were Here',2)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Sgt. Peppers Lonely Hearts Club Band',1)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Yellow Submarine',1)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Revolver',1)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('The Wall',2)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Machine Head',3)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Perfect Strangers',3)")
+# cur.execute("INSERT INTO albums (album_nosaukums, band_id) VALUES('Wish You Were Here',2)")
 
 cur.execute('SELECT band_nosaukums FROM band')
 all_band = cur.fetchall()
