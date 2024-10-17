@@ -19,10 +19,10 @@ cur.execute("""CREATE TABLE if not exists albums (
             band_id INTEGER,
             FOREIGN KEY (band_id) REFERENCES band(band_id))""")
 
-cur.executemany("INSERT INTO band VALUES (?,?)",(grupas))
+# cur.executemany("INSERT INTO band VALUES (?,?)",(grupas))
 
-conn.commit()
-'''
+# conn.commit()
+
 cur.execute("INSERT INTO band (band_nosaukums) VALUES('The Beatles')")
 cur.execute("INSERT INTO band (band_nosaukums) VALUES('Pink Floyd')")
 cur.execute("INSERT INTO band (band_nosaukums) VALUES('Deep Purple')")
@@ -57,4 +57,3 @@ for visi_kopa in kopa:
 
 conn.commit()
 cur.close()
-'''
