@@ -12,7 +12,7 @@ def onclick(event):
 root.bind('<Return>', onclick)
 
 button = Button(root, text="click me", command=onclick)
-button.bind('<Button-1>', onclick)
+#button.bind('<Button-1>', onclick)
 button.pack()
 
 root.mainloop()

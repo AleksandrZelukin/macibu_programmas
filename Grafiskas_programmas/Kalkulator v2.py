@@ -11,6 +11,7 @@ res.place(relx=.2, rely=.4)
 nos = tk.Label(win, text = "Ievādu skaitļus lodziņā")
 nos.place(relx=.2, rely=.0)
 
+
 def summation():
     one = float(num1.get())
     two = float(num2.get())
