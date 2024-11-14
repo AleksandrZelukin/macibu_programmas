@@ -30,13 +30,12 @@ cur.execute("""CREATE TABLE if not exists pirkumi (
             FOREIGN KEY (pirkuma_nosaukums) REFERENCES preces(preces_id)
             )""")
 
-#cur.executemany("INSERT INTO band VALUES (?,?)",(grupas))
 
 conn.commit()
 
-cur.execute("INSERT INTO pirceji (pirceja_vards, pirceja_talrunis, pirceja_epasts) VALUES('Valdis','23782489','valdis@pasts.lv')")
-cur.execute("INSERT INTO preces (preces_nosaukums, preces_vienibas, preces_nosaukums) VALUES('Krējums', 'kg.', 6.8)")
-cur.execute("INSERT INTO pirkumi (pirkuma_pircejs, pirkuma_nosaukums, pirkuma_daudzums) VALUES(1,1,2)")
+# cur.execute("INSERT INTO pirceji (pirceja_vards, pirceja_talrunis, pirceja_epasts) VALUES('Valdis','23782489','valdis@pasts.lv')")
+# cur.execute("INSERT INTO preces (preces_nosaukums, preces_vienibas, preces_nosaukums) VALUES('Krējums', 'kg.', 6.8)")
+# cur.execute("INSERT INTO pirkumi (pirkuma_pircejs, pirkuma_nosaukums, pirkuma_daudzums) VALUES(1,1,2)")
 
 
 
