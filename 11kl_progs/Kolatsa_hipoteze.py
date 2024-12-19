@@ -10,4 +10,4 @@ while a>1:
         a = 3*a+1
         print(a)
     count += 1    
-    print(f"{count} soļos")
+print(f"{count} soļos")
