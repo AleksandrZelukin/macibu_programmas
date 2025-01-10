@@ -1,22 +1,20 @@
-import PySimpleGUI as sg
+# import PySimpleGUI as sg
+from PySimpleGUI import Input,Text, Button, Window, WINDOW_CLOSED
 
+layout = [[Text("Kā tevi sauc?")],
+          [Input(size=(20,1),key='-INPUT-')],
+          [Text(text='Sveiki! ',size=(40,1), key='-OUTPUT-')],
 
-layout = [[sg.Text("Kā tevi sauc?")],
-          [sg.Input(key='-INPUT-')],
-          [sg.Text(size=(40,1), key='-OUTPUT-')],
+          [Button('Ok'), Button('Quit')]]
 
-          [sg.Button('Ok'), sg.Button('Quit')]]
-
-
-window = sg.Window('Jautājums', layout)
-
+window = Window('Jautājums', layout)
 
 while True:
     event, values = window.read()
 
     window['-OUTPUT-'].update( values['-INPUT-'])
  
-    if event == sg.WINDOW_CLOSED or event == 'Quit':
+    if event == WINDOW_CLOSED or event == 'Quit':
         break
 
 window.close()
