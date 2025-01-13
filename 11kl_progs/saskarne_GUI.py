@@ -4,6 +4,8 @@ layout = [[sg.Text('Sveiciens!')],
         [sg.Text(" ", size =(15, 1), font=40)],
         [sg.Button('Ok'),sg.Cancel()]]
 
+
+
 window = sg.Window("Testa logs", layout)
 
 while True:
