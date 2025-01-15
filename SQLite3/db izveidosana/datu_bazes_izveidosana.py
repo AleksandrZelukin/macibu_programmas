@@ -1,6 +1,6 @@
 import sqlite3
 
-db = sqlite3.connect('itproger.db')
+db = sqlite3.connect('mana_datu_baze.db')
 
 # Create Cursor
 c = db.cursor()
