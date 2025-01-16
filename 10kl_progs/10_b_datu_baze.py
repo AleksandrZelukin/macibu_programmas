@@ -14,14 +14,15 @@ cursor.execute("""create table if not exists automobili(
                 valsts_numurs text primary key,
                 marka text,
                 modelis text,
-                gads int
-                ipasnieka_pk text
+                gads int,
+                ipasnieka_pk text,
                 FOREIGN KEY (ipasnieka_pk) REFERENCES auto_ipasnieki(pk)
                 ON DELETE CASCADE )""")
 
 
+
+
+cursor.execute("""SELECT * FROM auto_ipasnieki, automobili WHERE ipasnieka_pk = pk""")
+
 datu_baze.commit()
 datu_baze.close()
-
-
-# SELECT * FROM auto_ipasnieki, automobili WHERE ipasnieka_pk = pk

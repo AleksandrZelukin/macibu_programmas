@@ -13,10 +13,10 @@ def print_selection(v):
 s = tk.Scale(window, label='lūdzu',
              from_=0, to=10,
              orient=tk.HORIZONTAL,
-             length=200,
-             showvalue=0,
-             tickinterval=2,
-             resolution=0.01,
+             length=400,
+             showvalue=0.2,
+             tickinterval=1,
+             resolution=0.2,
              command=print_selection)
 s.pack()
  
