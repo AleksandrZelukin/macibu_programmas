@@ -20,3 +20,6 @@ cursor.execute("""create table if not exists automobili(
 
 datu_baze.commit()
 datu_baze.close()
+
+
+# SELECT * FROM auto_ipasnieki, automobili WHERE ipasnieka_pk = pk
