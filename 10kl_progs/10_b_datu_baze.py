@@ -15,7 +15,9 @@ cursor.execute("""create table if not exists automobili(
                 marka text,
                 modelis text,
                 gads int
-                ipasnieka_pk text)""")
+                ipasnieka_pk text
+                FOREIGN KEY (ipasnieka_pk) REFERENCES auto_ipasnieki(pk)
+                ON DELETE CASCADE )""")
 
 
 datu_baze.commit()
