@@ -24,5 +24,7 @@ cursor.execute("""create table if not exists automobili(
 
 cursor.execute("""SELECT * FROM auto_ipasnieki, automobili WHERE ipasnieka_pk = pk""")
 
+cursor.execute('DELETE FROM auto_ipasnieki WHERE vards = "Karlis"')
+
 datu_baze.commit()
 datu_baze.close()
