@@ -1,5 +1,0 @@
-print(type(1))
-print(type(1.1))
-print(type(1.1e3))
-print(type('alpha'))
-print(type("beta"))

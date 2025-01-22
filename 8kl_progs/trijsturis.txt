@@ -1,2 +1,0 @@
-Trijsturis ar malam a = 12,b = 12,c = 13 ekszistē!
-Trijsturis neekszistē!

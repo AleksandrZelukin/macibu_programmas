@@ -1,2 +1,0 @@
-{'ee': 'asd', 'rr': 'jkd', 'yy': 'klm'}
-{'oo': 'mmm', 'dd': 'yui'}
