@@ -1,3 +1,7 @@
-a = [1,34,"Rīga", 4.5, 6, 7, 8, 9, 10]
-
-print(a[1]+a[5])
+a = (1,4,12,45,78,90,100)
+print(len(a))
+a = list(a)
+a.append(200)
+a.insert(1,230)
+a = tuple(a)
+print(a)
