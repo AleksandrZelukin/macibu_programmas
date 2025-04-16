@@ -1,7 +1,3 @@
 a = (1,4,12,45,78,90,100)
-print(len(a))
-a = list(a)
-a.append(200)
-a.insert(1,230)
-a = tuple(a)
-print(a)
+
+
