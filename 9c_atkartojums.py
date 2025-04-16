@@ -1,20 +1,18 @@
-from math import pi
-a = "Riga"
-b = str(12)
-print(a+b)
+# a=[1,5,13,"Rīga","Latvija",3.6,100]
+# for i in a:
+#     if type(i) == str:
+#         print(i)
+# for i in a:
+#     if type(i) == float:
+#         print(i)
+# for i in a:
+#     if type(i) == int:
+#         print(i)
 
-
-a = 12
-b = 17
-s = a + b
-s = a - b
-s = a * b
-s = a / b
-s = a // b
-s = a % b
-s = a ** b   
-print(s)
-
-r = 125
-s = pi*r**2
-print(s)
+a = "taxi"
+print(a)
+b = list(a)
+# print(b)
+c=(b[::-1])
+b = "".join(c)
+print(b)
