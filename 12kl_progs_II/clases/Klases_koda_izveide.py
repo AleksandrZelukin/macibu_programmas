@@ -1,3 +1,6 @@
+import tkinter as tk
+from tkinter import messagebox
+
 '''
 1. uzdevums
 
@@ -32,10 +35,36 @@ class Rinkis:   #Izveidot klasi "Rinkis"
     def diametrs(self):   #aprēķina diametru
          print(2 * self.radiuss)
 
-rad1=Rinkis(0)
-rad1.diametrs()
-rad1.iestatit_radiusu()
-rad1.izvadit_radiusu()
+# rad1=Rinkis(0)
+# rad1.diametrs()
+# rad1.iestatit_radiusu()
+# rad1.izvadit_radiusu()
 
+def set_radius():
+    try:
+        r = float(radius_entry.get())
+        rad1.iestatit_radiusu(r)
+        messagebox.showinfo("Info", f"Rādiuss uzstādīts uz {rad1.radiuss}")
+    except ValueError:
+        messagebox.showerror("Kļūda", "Lūdzu, ievadiet skaitlisku vērtību!")
 
+def show_radius():
+    messagebox.showinfo("Rādiuss", f"Rādiuss: {rad1.radiuss}")
+
+def show_diameter():
+    diam = 2 * rad1.radiuss
+    messagebox.showinfo("Diametrs", f"Diametrs: {diam}")
+
+root = tk.Tk()
+root.title("Riņķa kalkulators")
+
+tk.Label(root, text="Ievadiet rādiusu:").pack(pady=5)
+radius_entry = tk.Entry(root)
+radius_entry.pack(pady=5)
+
+tk.Button(root, text="Uzstādīt rādiusu", command=set_radius).pack(pady=5)
+tk.Button(root, text="Parādīt rādiusu", command=show_radius).pack(pady=5)
+tk.Button(root, text="Parādīt diametru", command=show_diameter).pack(pady=5)
+
+root.mainloop()
     
